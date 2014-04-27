@@ -1,12 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="H:\Projetos\Game2D\Assets\Scripts\PlayerScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Walker.cs">
     <Files>
-      <File FileName="H:\Projetos\Game2D\Assets\Scripts\PlayerScript.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\Walker.cs" Line="1" Column="1" />
+      <File FileName="Assets\Plugins\My Scripts\MonoBehaviours\EnhancedBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AnimatedWalker.cs" Line="1" Column="1" />
+      <File FileName="Assets\Plugins\My Scripts\MonoBehaviours\FollowTransform.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerCameraControl.cs" Line="1" Column="1" />
+      <File FileName="d:\Documents\GitHub\CamoStealthUnity\Camo Stealth TCC\Assets\Plugins\My Scripts\Classes\ExtensionMethods.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\Documents\GitHub\CamoStealthUnity\Camo Stealth TCC\Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" line="462" />
+      <Breakpoint file="D:\Documents\GitHub\CamoStealthUnity\Camo Stealth TCC\Assets\Scripts\Walker.cs" line="458" />
+      <Breakpoint file="D:\Documents\GitHub\CamoStealthUnity\Camo Stealth TCC\Assets\Scripts\Walker.cs" line="459" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
