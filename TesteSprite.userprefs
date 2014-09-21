@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\MainMenu\Scripts\MainMenuManager.cs">
+    <Files>
+      <File FileName="..\SelfPong\Assets\BallMovement.cs" Line="35" Column="13" />
+      <File FileName="..\SelfPong\Assets\PaddleMovement.cs" Line="1" Column="1" />
+      <File FileName="..\SelfPong\Assets\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scenes\MainMenu\Scripts\MainMenuManager.cs" Line="77" Column="19" />
+      <File FileName="Assets\Scripts\MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Exit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Mover.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ApplicationModel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SaveGame.cs" Line="25" Column="21" />
+      <File FileName="Assets\Scripts\BackButtom.cs" Line="24" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\JOAO\Desktop\BlueMoon\SelfPong\Assets\GameManager.cs" line="48" />
+      <Breakpoint file="C:\Users\JOAO\Desktop\BlueMoon\TesteSprite\Assets\Scenes\MainMenu\Scripts\MainMenuManager.cs" line="38" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="..\SelfPong\Assets\BallMovement.cs" line="17" offsetX="389" offsetY="272" expression="c" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
