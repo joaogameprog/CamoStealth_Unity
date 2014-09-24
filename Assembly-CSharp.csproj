@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EditableText.cs" />
      <Compile Include="Assets\Exit.cs" />
      <Compile Include="Assets\General\Plugins\SortingLayerAttribute.cs" />
      <Compile Include="Assets\General\Plugins\SortingLayerExposed.cs" />
@@ -53,6 +54,7 @@
      <Compile Include="Assets\Scenes\MainMenu\Scripts\HelpScreenManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\OptionsScreenManager.cs" />
+     <Compile Include="Assets\Scenes\MainMenu\Scripts\TextWrapper.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\TranslatedSpriteManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\TranslatedTextManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\TranslationsLanguages.cs" />
