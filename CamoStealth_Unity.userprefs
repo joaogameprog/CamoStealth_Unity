@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Skillab\PetLecoClub\Assets\Scenes\Mapas\house\Scripts\HouseItem.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EditableText.cs">
     <Files>
-      <File FileName="..\..\Skillab\PetLecoClub\Assets\Scenes\Mapas\house\Scripts\HouseItem.cs" Line="166" Column="1" />
+      <File FileName="Assets\EditableText.cs" Line="6" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
