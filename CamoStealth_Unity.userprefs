@@ -2,13 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EditableText.cs">
     <Files>
-      <File FileName="Assets\EditableText.cs" Line="1" Column="1" />
-      <File FileName="Assets\EditableText.cs" Line="117" Column="26" />
+      <File FileName="Assets\EditableText.cs" Line="79" Column="18" />
+      <File FileName="Assets\Scenes\MainMenu\Scripts\TextWrapper.cs" Line="35" Column="1" />
+      <File FileName="Assets\ChatHandler.cs" Line="23" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\JOAO\Desktop\BlueMoon\CamoStealth_Unity\Assets\EditableText.cs" line="109" />
+      <Breakpoint file="C:\Users\JOAO\Desktop\BlueMoon\CamoStealth_Unity\Assets\EditableText.cs" line="139" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

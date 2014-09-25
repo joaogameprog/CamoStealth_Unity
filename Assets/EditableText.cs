@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TouchScript.Gestures;
+using System;
+using System.Linq;
 
 [RequireComponent (typeof(BoxCollider2D))]
 [RequireComponent (typeof(TapGesture))]
 [RequireComponent (typeof(TextMesh))]
 public class EditableText : MonoBehaviour {
 	#region Fields
+	public Action OnEnterPressed;
+
 	[SerializeField]
 	int id;
 
@@ -68,6 +72,16 @@ public class EditableText : MonoBehaviour {
 	int shownStartIndex;
 
 	bool isSelected;
+
+
+	TouchScreenKeyboard mobileKeyboard;
+
+	[SerializeField]
+	TouchScreenKeyboardType type;
+
+	[SerializeField]
+	bool isPassword;
+
 	#endregion
 
 	#region Behaviours
@@ -87,18 +101,18 @@ public class EditableText : MonoBehaviour {
 		if(isSelected)
 		{
 			Event e = Event.current;
-			if(e != null && e.type == EventType.KeyDown){
+			if(e != null && e.type == EventType.KeyDown || (mobileKeyboard != null)){
 					if(e.keyCode != KeyCode.None){
 						if(e.keyCode == KeyCode.Backspace && indexerPos > 0){
 							Text = Text.Remove(indexerPos - 1, 1);
 							indexerPos = Mathf.Max(0,indexerPos--);
-						}else if(e.keyCode == KeyCode.Delete && indexerPos < Text.Length - 1){
+						}else if(e.keyCode == KeyCode.Delete && indexerPos < Text.Length){
 							Text = Text.Remove(indexerPos, 1);
 							indexerPos = Mathf.Max(0,indexerPos--);
 						} 
-							else if(e.keyCode == KeyCode.Return)
+						else if(e.keyCode == KeyCode.Return)
 						{
-							Selected(this, System.EventArgs.Empty);
+							EnterPressed ();
 						}
 						else if(e.keyCode == KeyCode.Tab)
 						{
@@ -118,15 +132,31 @@ public class EditableText : MonoBehaviour {
 						}
 						e.Use();
 					}
-
-					else if(e.character != '\t')
+					else if((int)e.character > 31)
 					{
 						Text = Text.Insert(indexerPos, e.character.ToString());
 						indexerPos++;
 					}
-					
+
+					if(mobileKeyboard != null)
+					{
+						if(mobileKeyboard.done)
+						{
+							isSelected = false;
+							SetInfo(isSelected);
+						}
+						if(mobileKeyboard.active)
+						{
+							Text = mobileKeyboard.text;
+						}
+					}
+				         
 					indexerPos = (int)Mathf.Clamp(indexerPos, 0, Text.Length);
+
 					textMesh.text = Text;
+					if(isPassword){
+						textMesh.text = new string('*',textMesh.text.Length);
+					}
 					if(textMesh.renderer.bounds.size.x > boxCollider.bounds.size.x)
 					{
 						var width = 0;
@@ -134,7 +164,10 @@ public class EditableText : MonoBehaviour {
 						int removedFromStart = 0;
 						int removedFromEnd = 0;
 						string newText = Text;
-						while(GetTextWidth(newText) > boxCollider.bounds.size.x)
+						if(isPassword){
+							textMesh.text = new string('*',newText.Length);
+						}
+					while(GetTextWidth(newText) > boxCollider.bounds.size.x)
 						{
 							if(indexerPos > newText.Length / 2){
 								newText = newText.Remove(0, 1);
@@ -151,8 +184,12 @@ public class EditableText : MonoBehaviour {
 					}else{
 						shownStartIndex = 0;
 					}
+					if(isPassword){
+						textMesh.text = new string('*',textMesh.text.Length);
+					}
 					shownString = textMesh.text;
-					/*
+
+				/* 
 					if(Event.current != null){
 						if(Event.current.isKey){
 							Text = Event.current.keyCode.ToString();
@@ -176,14 +213,16 @@ public class EditableText : MonoBehaviour {
 					Selected(this, System.EventArgs.Empty);
 				}
 			}
-			indexerTimer -= Time.deltaTime;
+			if(!isPassword && mobileKeyboard == null){
+				indexerTimer -= Time.deltaTime;
 
-			if(indexerTimer < 0)
-			{
-				showIndexer = !showIndexer;
-				indexerTimer = indexerTime;
-				textMesh.text = Text.Insert(indexerPos,(showIndexer ? "|" : ""))
-					.Substring(shownStartIndex, shownString.Length);
+				if(indexerTimer < 0)
+				{
+					showIndexer = !showIndexer;
+					indexerTimer = indexerTime;
+					textMesh.text = Text.Insert(indexerPos,(showIndexer ? "|" : ""))
+						.Substring(shownStartIndex, shownString.Length + (showIndexer ? 1 : 0));
+				}
 			}
 		}
 	}
@@ -206,8 +245,19 @@ public class EditableText : MonoBehaviour {
 	#endregion
 
 	#region Events
+
+	void EnterPressed ()
+	{
+		if(OnEnterPressed != null)
+		{
+			OnEnterPressed();
+		}else{
+			Selected (this, System.EventArgs.Empty);
+		}
+	}
 	public void Selected (object sender, System.EventArgs e)
 	{
+
 		isSelected = !isSelected;
 		SetInfo (isSelected);
 	}
@@ -216,17 +266,30 @@ public class EditableText : MonoBehaviour {
 	void SetInfo (bool selected)
 	{
 		if (selected) {
+#if !UNITY_EDITOR
+			TouchScreenKeyboard.hideInput = false;
+			mobileKeyboard = TouchScreenKeyboard.Open (Text, type, false, false, isPassword, false, defaultText);
+#endif
+
 			textMesh.color = selectedColor;
 			indexerPos = Text.Length;
 		}
 		else {
 			textMesh.color = normalColor;
 			string newText = Text;
+			#if !UNITY_EDITOR
+			mobileKeyboard.active = false;
+			mobileKeyboard = null;
+			#endif
+
 			while(GetTextWidth(newText) > boxCollider.bounds.size.x)
 			{
 				newText = newText.Remove(newText.Length - 1, 1);
 			}
 			textMesh.text = newText;
+			if(isPassword){
+				textMesh.text = new string('*',textMesh.text.Length);
+			}
 			if (string.IsNullOrEmpty (textMesh.text)) {
 				textMesh.text = defaultText;
 			}
