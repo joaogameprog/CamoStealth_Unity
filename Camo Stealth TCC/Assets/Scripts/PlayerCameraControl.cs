@@ -24,8 +24,8 @@ public class PlayerCameraControl : EnhancedBehaviour {
 			).x;
 
 
-		followCamera.followX = (leftBorder > _walker.transform.position.x || rightBorder < _walker.transform.position.x ); ///Mathf.Abs(followCamera.transform.position.x  - _walker.transform.position.x) > 
-		followCamera.followY = _walker.State != WalkerState.GROUNDED;
+		//followCamera.followX = (leftBorder > _walker.transform.position.x || rightBorder < _walker.transform.position.x ); ///Mathf.Abs(followCamera.transform.position.x  - _walker.transform.position.x) > 
+		//followCamera.followY = _walker.State != WalkerState.GROUNDED;
 	}
 
 

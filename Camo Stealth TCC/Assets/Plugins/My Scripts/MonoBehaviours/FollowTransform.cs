@@ -7,7 +7,7 @@ public class FollowTransform : EnhancedBehaviour {
 	[SerializeField]
 	Transform target;
 
-	public Transform Target {
+	/*public Transform Target {
 		get {
 			return target;
 		}
@@ -73,5 +73,5 @@ public class FollowTransform : EnhancedBehaviour {
 			myPos.z = followZ ? target.position.z : MyTransform.position.z;
 			MyTransform.position = myPos;
 		}
-	}
+	}*/
 }
