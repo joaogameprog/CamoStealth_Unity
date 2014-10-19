@@ -14,6 +14,8 @@ public class Aranha : MonoBehaviour {
 
 	public bool playerDetected = false;
 
+	public GameObject bulletType = null;
+
 	void Awake(){
 		animator = GetComponent<Animator>();
 		initialXPosition = (int)transform.position.x;
@@ -32,6 +34,12 @@ public class Aranha : MonoBehaviour {
 				transform.position += new Vector3(speed*Mathf.Sign(transform.localScale.x),0,0);
 				if((int)transform.position.x == initialXPosition+(Mathf.Sign(transform.localScale.x)>=0?walkRange:0))
 					resting = restTime;
+			}
+		}else{
+			if(Time.frameCount%10==0){
+				int direction = (int)Mathf.Sign(transform.localScale.x);
+				GameObject bullet = Instantiate(bulletType,transform.position + new Vector3(0.56f * direction,0.24f,0),Quaternion.identity) as GameObject;
+				bullet.GetComponent<Gunshot>().speed *= direction;
 			}
 		}
 		animator.SetInteger("Resting",resting);

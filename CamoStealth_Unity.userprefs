@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Skillab\PetLecoClub\Assets\Scenes\Mapas\house\Scripts\HouseItem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Mover.cs">
     <Files>
-      <File FileName="..\..\Skillab\PetLecoClub\Assets\Scenes\Mapas\house\Scripts\HouseItem.cs" Line="166" Column="1" />
+      <File FileName="Assets\Scripts\Mover.cs" Line="60" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

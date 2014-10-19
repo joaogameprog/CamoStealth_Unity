@@ -10,8 +10,8 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: left
     positiveButton: right
-    altNegativeButton: j
-    altPositiveButton: l
+    altNegativeButton: a
+    altPositiveButton: d
     gravity: 3
     dead: .00100000005
     sensitivity: 3
@@ -26,8 +26,8 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: down
     positiveButton: up
-    altNegativeButton: k
-    altPositiveButton: i
+    altNegativeButton: s
+    altPositiveButton: w
     gravity: 3
     dead: .00100000005
     sensitivity: 3
@@ -56,7 +56,7 @@ InputManager:
     m_Name: Fire2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: a
+    negativeButton: 
     positiveButton: left alt
     altNegativeButton: 
     altPositiveButton: mouse 1
@@ -203,7 +203,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 1
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: '[6]'
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -235,7 +235,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 3
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: '[5]'
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000

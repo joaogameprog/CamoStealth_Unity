@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_3;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,16 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ChatHandler.cs" />
-     <Compile Include="Assets\EditableText.cs" />
-     <Compile Include="Assets\Exit.cs" />
      <Compile Include="Assets\General\Plugins\SortingLayerAttribute.cs" />
      <Compile Include="Assets\General\Plugins\SortingLayerExposed.cs" />
      <Compile Include="Assets\General\Scripts\HighlightButtom.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\HelpScreenManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\OptionsScreenManager.cs" />
-     <Compile Include="Assets\Scenes\MainMenu\Scripts\TextWrapper.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\TranslatedSpriteManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\TranslatedTextManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\TranslationsLanguages.cs" />
@@ -63,16 +59,30 @@
      <Compile Include="Assets\Scripts\Aranha.cs" />
      <Compile Include="Assets\Scripts\BackButtom.cs" />
      <Compile Include="Assets\Scripts\CollisionCheck.cs" />
+     <Compile Include="Assets\Scripts\CollisionCheckerDown.cs" />
      <Compile Include="Assets\Scripts\DashImage.cs" />
+     <Compile Include="Assets\Scripts\Exit.cs" />
+     <Compile Include="Assets\Scripts\Gunshot.cs" />
      <Compile Include="Assets\Scripts\HideSpot.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\SaveGame.cs" />
+     <Compile Include="Assets\Scripts\SecretPassage.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Skills\DashSkillModule.cs" />
+     <Compile Include="Assets\Scripts\Skills\HideSkillModule.cs" />
+     <Compile Include="Assets\Scripts\Skills\JumpSkillModule.cs" />
+     <Compile Include="Assets\Scripts\Skills\MoveSkillModule.cs" />
+     <Compile Include="Assets\Scripts\Skills\PlayerCommand\PlayerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Skills\PlayerCommand\PlayerCommand.cs" />
+     <Compile Include="Assets\Scripts\Skills\WallSkillModule.cs" />
      <Compile Include="Assets\Scripts\SpiderVision.cs" />
-     <Compile Include="Assets\SecretPassage.cs" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
  <Reference Include="TouchScript">
- <HintPath>C:/Users/Ilustrador/Desktop/MyProjects/CamoStealth_Unity/Assets/General/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/Users/Alexandre/Documents/GitHub/CamoStealth_Unity/Assets/General/Plugins/TouchScript.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -125,6 +125,7 @@ MonoBehaviour:
   initialXPosition: 0
   resting: 0
   playerDetected: 0
+  bulletType: {fileID: 100000, guid: 1b4f516cdb4091041a65fd1af24bbebc, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

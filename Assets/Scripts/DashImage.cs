@@ -11,12 +11,7 @@ public class DashImage : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void FixedUpdate () {
-		float r = 97;
-		float g = 0;
-		float b = 128;
-		float a = sr.color.a;
-		sr.color = new Color(r,g,b,a-0.1f);
-		//this.renderer.material.SetColor(1, new Color(r,g,b,a));
+		sr.color = new Color(sr.color.r,sr.color.g,sr.color.b,sr.color.a-0.05f);
 		if(sr.color.a <= 0) Destroy(gameObject);
 	}
 }
