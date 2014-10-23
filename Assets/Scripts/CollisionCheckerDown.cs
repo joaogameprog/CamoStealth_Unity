@@ -10,9 +10,11 @@ public class CollisionCheckerDown : MonoBehaviour {
 	}
 	
 	void OnTriggerExit2D(Collider2D obj){
-		if(obj.tag == "Platform" && transform.parent.gameObject.GetComponent<WallSkillModule>() != null){
+		if(obj.tag == "Platform" && transform.parent != null && transform.parent.gameObject.GetComponent<WallSkillModule>() != null){
 			transform.parent.gameObject.GetComponent<WallSkillModule>().groundColliding = false;
-			++transform.parent.gameObject.GetComponent<JumpSkillModule>().airJumpCount;
+			JumpSkillModule jump = transform.parent.gameObject.GetComponent<JumpSkillModule>();
+			++jump.airJumpCount;
+			if(jump.dashJumping) ++transform.parent.gameObject.GetComponent<DashSkillModule>().airDashCount;
 		}
 	}
 }

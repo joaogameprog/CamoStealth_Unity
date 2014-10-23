@@ -1,17 +1,27 @@
-﻿using UnityEngine;
+﻿//######################################################################################################################
+// DashImage
+// * Componente que controla o comportamento da sombra do Dash do jogador
+//######################################################################################################################
+using UnityEngine;
 using System.Collections;
 
 public class DashImage : MonoBehaviour {
-	SpriteRenderer sr;
 
+	SpriteRenderer sr; // sprite Renderer
+
+	//------------------------------------------------------------------------------------------------------------------
+	// Inicializaçao a imagem
+	//------------------------------------------------------------------------------------------------------------------
 	void Awake(){
 		sr = this.GetComponent<SpriteRenderer>();
-		GameObject player = ((GameObject)(GameObject.FindGameObjectsWithTag("Player")[0]));
-		sr.sprite = player.GetComponent<SpriteRenderer>().sprite;
+		sr.sprite = Player.player.GetComponent<SpriteRenderer>().sprite; // captura a sprite atual do player
 	}
-	// Update is called once per frame
+
+	//------------------------------------------------------------------------------------------------------------------
+	// update da imagem
+	//------------------------------------------------------------------------------------------------------------------
 	void FixedUpdate () {
-		sr.color = new Color(sr.color.r,sr.color.g,sr.color.b,sr.color.a-0.05f);
-		if(sr.color.a <= 0) Destroy(gameObject);
+		sr.color = new Color(sr.color.r,sr.color.g,sr.color.b,sr.color.a-0.1f); // diminue a opacidade gradativamente
+		if(sr.color.a <= 0) Destroy(gameObject); // Deleta o objeto quando a opacidade for zero
 	}
 }

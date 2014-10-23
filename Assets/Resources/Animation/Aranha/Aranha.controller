@@ -174,7 +174,7 @@ State:
   m_Position: {x: 108, y: 36, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
-  m_Tag: 
+  m_Tag: Iddle
 --- !u!1102 &110253323
 State:
   m_ObjectHideFlags: 3
@@ -189,7 +189,7 @@ State:
   m_Position: {x: -132, y: 156, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
-  m_Tag: 
+  m_Tag: Shooting
 --- !u!1102 &110276046
 State:
   m_ObjectHideFlags: 3
@@ -204,7 +204,7 @@ State:
   m_Position: {x: -132, y: 36, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
-  m_Tag: 
+  m_Tag: Iddle
 --- !u!1107 &110700000
 StateMachine:
   serializedVersion: 2

@@ -1,21 +1,22 @@
-﻿using UnityEngine;
+﻿//######################################################################################################################
+// Gunshot
+// * Componente que controla os tiros das armas das aranhas
+//######################################################################################################################
+using UnityEngine;
 using System.Collections;
 
-public class Gunshot : MonoBehaviour {
+public class Gunshot : Damager {
 
-	private SpriteRenderer sr;
+	//private SpriteRenderer sr;
 
-	public float Damage = 10;
 	public float speed  = 1;
-	public Color color  = Color.blue;
 
 	void Awake(){
-		sr = GetComponent<SpriteRenderer>();
-		sr.color = color;
+		//sr = GetComponent<SpriteRenderer>();
 	}
 	// Use this for initialization
 	void Start () {
-		Destroy(gameObject,2);
+		Destroy(gameObject,60);
 	}
 	
 	// Update is called once per frame
