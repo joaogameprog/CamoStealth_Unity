@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Mover : MonoBehaviour {
+	/*
 	//Atalhos
 	Animator animator;
 	Rigidbody2D rb;
@@ -215,5 +216,5 @@ public class Mover : MonoBehaviour {
 			if(dash.Overlaps(pos,true)) return TouchState_Action.dash;
 		}
 		return TouchState_Action.nothing;
-	}
+	}*/
 }

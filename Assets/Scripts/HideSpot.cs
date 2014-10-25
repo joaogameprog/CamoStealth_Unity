@@ -5,13 +5,13 @@ public class HideSpot : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D obj){
 		if(obj.tag == "Player"){
-			obj.GetComponent<Mover>().trulyHiding = obj.GetComponent<Mover>().GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("Hiding");
+			obj.GetComponent<HideSkillModule>().trulyHiding = obj.GetComponent<Player>().GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("Hiding");
 		}
 	}
 	
 	void OnTriggerExit2D(Collider2D obj){
 		if(obj.tag == "Player"){
-			obj.GetComponent<Mover>().trulyHiding = false;
+			obj.GetComponent<HideSkillModule>().trulyHiding = false;
 		}
 	}
 }

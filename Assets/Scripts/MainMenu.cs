@@ -69,7 +69,7 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	void action(){
-		if(option == 0) Application.LoadLevel("scene1");
+		if(option == 0) Application.LoadLevel("level1");
 		if(option == 1) transform.position = new Vector3(-1.2186f,-0.8086f,0);
 		if(option == 2) Credits = !Credits;
 		if(option == 3) Options = !Options;
