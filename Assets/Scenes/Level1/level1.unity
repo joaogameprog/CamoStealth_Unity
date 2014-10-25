@@ -1010,7 +1010,7 @@ MonoBehaviour:
   death: 0
   deathTime: 0
   dashTime: 15
-  jump: 6
+  jump: 4.5
   speed: 1.79999995
   dashVelocity: 6
   wallGlideVelocity: -.5
