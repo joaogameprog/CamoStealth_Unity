@@ -9,7 +9,29 @@ public class DamageModule : PlayerCommand {
 	
 	//Vida
 	public float maxHealth = 100;                          // vida maxima do jogador
-	public float health = 100;                             // vida do jogador
+	private float health = 100;                             // vida do jogador
+
+	/// <summary>
+	/// Gets or sets the health.
+	/// </summary>
+	/// <value>The health.</value>
+	public float Health 
+	{ 
+		get 
+		{ 
+			return health; 
+		} 
+		set 
+		{ 
+			health = Mathf.Clamp(value, 0, maxHealth); 
+			if(hudManager != null)
+			{
+				hudManager.Life = health / maxHealth;
+			}else{
+				hudManager = GameObject.FindObjectOfType<HudManager>();
+			}
+		} 
+	}                             
 	public float regen = 0.1f;                             // vida que o jogador regenera por frame
 	public float armor = 1;                                // armadura do jogador
 	public float knockbackResist = 0;                      // porcentagem que eh ignoradado do knockback quando o personagem eh atingido (Varia de 0 a 1)
@@ -24,11 +46,11 @@ public class DamageModule : PlayerCommand {
 
 	//(Eu podia usar uma pilha de Damager aqui, mas ja que o personagem soh pode ser atingido por um objeto de cada vez, vai ficar assim mesmo)
 	[HideInInspector] public Damager damager = null;       // Referencia ao objeto causador de dano 
-
+	HudManager hudManager;
 	GUIStyle gs = new GUIStyle();
 	
 	void OnGUI(){
-		GUI.Label(new Rect(100,100,100,100),health.ToString() + "\n" + rb.velocity.ToString(),gs);
+		GUI.Label(new Rect(100,100,100,100),Health.ToString() + "\n" + rb.velocity.ToString(),gs);
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -56,8 +78,8 @@ public class DamageModule : PlayerCommand {
 	// aplica o dano
 	//------------------------------------------------------------------------------------------------------------------
 	override protected void startCommand(){
-		health -= damager.damage - armor;
-		death = health <= 0;
+		Health -= damager.damage - armor;
+		death = Health <= 0;
 		damageTimeCount = damageTime;
 		invencibilityCount = invencibilityTime;
 		rb.velocity = new Vector2(getKnockback(),0);
@@ -71,8 +93,8 @@ public class DamageModule : PlayerCommand {
 		if(dmg.death) {
 			die();
 		}else{
-			float result = health + regen;
-			health = result>maxHealth? maxHealth : result;
+			float result = Health + regen;
+			Health = result>maxHealth? maxHealth : result;
 		}
 	}
 

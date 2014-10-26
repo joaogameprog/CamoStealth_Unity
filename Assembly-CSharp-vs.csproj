@@ -50,6 +50,7 @@
      <Compile Include="Assets\General\Plugins\SortingLayerAttribute.cs" />
      <Compile Include="Assets\General\Plugins\SortingLayerExposed.cs" />
      <Compile Include="Assets\General\Scripts\HighlightButtom.cs" />
+     <Compile Include="Assets\General\Scripts\HudManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\HelpScreenManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\OptionsScreenManager.cs" />
