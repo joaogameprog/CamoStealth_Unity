@@ -27,7 +27,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 	private SoundModule mySound;
 	private Camera myCam;
 	
-	protected Player player{
+	public Player player{
 		get{
 			if(myPlayer == null){
 				myPlayer = GetComponent<Player>();
@@ -39,7 +39,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 	
-	protected Animator anim{
+	public Animator anim{
 		get{
 			if(myAnimator == null){
 				myAnimator = GetComponent<Animator>();
@@ -51,7 +51,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 	
-	protected Rigidbody2D rb{
+	public Rigidbody2D rb{
 		get{
 			if(myRigidbody == null){
 				myRigidbody = GetComponent<Rigidbody2D>();
@@ -63,7 +63,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected SpriteRenderer sr{
+	public SpriteRenderer sr{
 		get{
 			if(mySpriteRenderer == null){
 				mySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -75,7 +75,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected MoveSkillModule move{
+	public MoveSkillModule move{
 		get{
 			if(myMove == null){
 				myMove = GetComponent<MoveSkillModule>();
@@ -87,7 +87,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected HideSkillModule hide{
+	public HideSkillModule hide{
 		get{
 			if(myHide == null){
 				myHide = GetComponent<HideSkillModule>();
@@ -99,7 +99,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected WallSkillModule wall{
+	public WallSkillModule wall{
 		get{
 			if(myWall == null){
 				myWall = GetComponent<WallSkillModule>();
@@ -111,7 +111,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected DashSkillModule dash{
+	public DashSkillModule dash{
 		get{
 			if(myDash == null){
 				myDash = GetComponent<DashSkillModule>();
@@ -123,7 +123,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected JumpSkillModule jump{
+	public JumpSkillModule jump{
 		get{
 			if(myJump == null){
 				myJump = GetComponent<JumpSkillModule>();
@@ -135,7 +135,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected DamageModule dmg{
+	public DamageModule dmg{
 		get{
 			if(myDamage == null){
 				myDamage = GetComponent<DamageModule>();
@@ -147,7 +147,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 	}
 
-	protected SoundModule sound{
+	public SoundModule sound{
 		get{
 			if(mySound == null){
 				mySound = GetComponent<SoundModule>();

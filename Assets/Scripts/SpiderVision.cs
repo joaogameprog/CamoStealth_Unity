@@ -17,4 +17,8 @@ public class SpiderVision : MonoBehaviour {
 			transform.parent.gameObject.GetComponent<Aranha>().playerDetected = false;
 		}
 	}
+
+	void Start(){
+		GetComponent<SpriteRenderer>().color = Color.white;
+	}
 }

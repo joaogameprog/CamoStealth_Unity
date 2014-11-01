@@ -10,6 +10,7 @@ public class Gunshot : Damager {
 	//private SpriteRenderer sr;
 
 	public float speed  = 1;
+	public Vector2 rotation;//= new Vector2(1,0);
 
 	void Awake(){
 		//sr = GetComponent<SpriteRenderer>();
@@ -21,6 +22,6 @@ public class Gunshot : Damager {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position += new Vector3(speed,0,0);
+		this.transform.position += new Vector3(speed*rotation.x,speed*rotation.y,0);
 	}
 }

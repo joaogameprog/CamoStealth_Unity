@@ -47,10 +47,11 @@ public class DamageModule : PlayerCommand {
 	//(Eu podia usar uma pilha de Damager aqui, mas ja que o personagem soh pode ser atingido por um objeto de cada vez, vai ficar assim mesmo)
 	[HideInInspector] public Damager damager = null;       // Referencia ao objeto causador de dano 
 	HudManager hudManager;
+
 	GUIStyle gs = new GUIStyle();
 	
 	void OnGUI(){
-		GUI.Label(new Rect(100,100,100,100),Health.ToString() + "\n" + rb.velocity.ToString(),gs);
+		GUI.Label(new Rect(100,100,100,100),Health.ToString() + "\n" + new Vector2(Screen.width,Screen.height),gs);
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -80,6 +81,8 @@ public class DamageModule : PlayerCommand {
 	override protected void startCommand(){
 		Health -= damager.damage - armor;
 		death = Health <= 0;
+		if(death) transform.localScale = new Vector3(transform.localScale.x *-1,transform.localScale.y,transform.localScale.z);
+		if(death)sound.soundToPlay = LeonSound.death;
 		damageTimeCount = damageTime;
 		invencibilityCount = invencibilityTime;
 		rb.velocity = new Vector2(getKnockback(),0);
@@ -103,16 +106,9 @@ public class DamageModule : PlayerCommand {
 	//------------------------------------------------------------------------------------------------------------------
 	public void die(){
 		transform.DetachChildren();
-		anim.SetBool("Death",true);
 		rigidbody2D.isKinematic = true;
 
-		sound.soundToPlay = LeonSound.death;
-		
-		sr.color = new Color(sr.color.r + 0.1f,sr.color.g - 0.1f,sr.color.b - 0.1f,sr.color.a -0.01f);
-		float x = (deathTime+150)/1500.0f;
-		transform.position += new Vector3(x/10*-(Mathf.Sign(transform.localScale.x)),x/10,0);
-
-		if(--deathTime <=-150)
+		if(++deathTime >= 100)
 			Application.LoadLevel("MainMenuScreen");
 	}
 

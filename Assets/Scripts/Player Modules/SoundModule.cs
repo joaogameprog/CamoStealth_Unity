@@ -47,7 +47,7 @@ public class SoundModule : PlayerCommand {
 	private void playDeathAudio(){
 		audio.Stop();
 		audio.clip = deathAudio;
-		audio.pitch = 1.0f;
+		audio.pitch = 1;
 		audio.Play();
 	}
 

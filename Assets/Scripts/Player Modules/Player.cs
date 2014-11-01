@@ -26,7 +26,6 @@ public class Player : PlayerBehaviour {
 	void FixedUpdate () {
 		if(Exit.victory) return;
 		dmg.runCommand();
-		//if(dmg.death){ dmg.die(); return;}
 
 		hide.runCommand();
 		wall.runCommand();
@@ -45,7 +44,8 @@ public class Player : PlayerBehaviour {
 		anim.SetInteger("HorizontalAxis",(int)move.horizontal);
 		anim.SetInteger("Dashing",(int)GetComponent<DashSkillModule>().dashing);
 		anim.SetBool("PlatformColliding",wall.platformColliding);
-		anim.SetBool("Damage",dmg.damageTimeCount>0);
+		anim.SetBool("Damage",dmg.damageTimeCount>0 && !dmg.death);
+		anim.SetBool("Death",dmg.death);
 	}
 	
 	//------------------------------------------------------------------------------------------------------------------
