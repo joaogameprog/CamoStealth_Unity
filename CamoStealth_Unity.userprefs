@@ -1,22 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player Modules\SoundModule.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Lamp.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player Modules\SoundModule.cs" Line="69" Column="16" />
-      <File FileName="Assets\Scripts\Player Modules\DamageModule.cs" Line="103" Column="3" />
-      <File FileName="Assets\Scripts\Player Modules\DashSkillModule.cs" Line="48" Column="104" />
-      <File FileName="Assets\Scripts\Player Modules\HideSkillModule.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player Modules\JumpSkillModule.cs" Line="24" Column="1" />
-      <File FileName="Assets\Scripts\Player Modules\MoveSkillModule.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player Modules\WallSkillModule.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player Modules\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gunshot.cs" Line="15" Column="41" />
-      <File FileName="Assets\Scripts\Damager.cs" Line="27" Column="62" />
-      <File FileName="Assets\Scripts\CollisionCheck.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Aranha.cs" Line="85" Column="38" />
-      <File FileName="Assets\Scripts\Player Modules\PlayerCommand\PlayerBehaviour.cs" Line="23" Column="33" />
-      <File FileName="Assets\Scripts\CollisionCheckerDown.cs" Line="17" Column="100" />
-      <File FileName="Assets\Scripts\SpiderVision.cs" Line="14" Column="2" />
+      <File FileName="Assets\Scripts\Player Modules\HideSkillModule.cs" Line="39" Column="52" />
+      <File FileName="Assets\Scripts\Gunshot.cs" Line="36" Column="35" />
+      <File FileName="Assets\Scripts\Aranha.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Lamp.cs" Line="73" Column="1" />
+      <File FileName="Assets\Scripts\CollisionCheck.cs" Line="13" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

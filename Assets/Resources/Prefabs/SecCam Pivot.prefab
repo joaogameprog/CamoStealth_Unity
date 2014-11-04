@@ -56,8 +56,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .195769995, y: -.165649995, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalPosition: {x: .971260011, y: -.792450011, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
   m_RootOrder: 0
@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64569998, y: 2.76329994, z: 0}
+  m_LocalPosition: {x: -4.84149981, y: 3, z: -1.02339995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -111,17 +111,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aranhas:
   - {fileID: 0}
+  hideSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   rotationTime: 90
-  waitTime: 90
+  waitTime: 180
   positions:
   - 0
   - -20
   - -90
   - -20
-  lerpCount: 0
+  waitCount: 0
   detectionSpeed: .00499999989
   undetectionSpeed: .00249999994
-  followMaxSpeed: .5
+  playerDetected: 0
+  followMaxSpeed: .200000003
   state: 1
 --- !u!212 &21200000
 SpriteRenderer:

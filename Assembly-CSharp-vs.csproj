@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EditableText.cs" />
      <Compile Include="Assets\General\Plugins\SortingLayerAttribute.cs" />
      <Compile Include="Assets\General\Plugins\SortingLayerExposed.cs" />
      <Compile Include="Assets\General\Scripts\HighlightButtom.cs" />
@@ -68,6 +67,7 @@
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\Gunshot.cs" />
      <Compile Include="Assets\Scripts\HideSpot.cs" />
+     <Compile Include="Assets\Scripts\Lamp.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\Paralax.cs" />

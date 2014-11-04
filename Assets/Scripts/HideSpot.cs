@@ -7,7 +7,7 @@ public class HideSpot : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D obj){
 		if(obj.tag == "Player"){
-			Player.player.hide.trulyHiding = Player.player.anim.GetCurrentAnimatorStateInfo(0).IsTag("Hiding") && !playerDetectedByLocalCamera;
+			Player.player.hide.trulyHiding = Player.player.anim.GetCurrentAnimatorStateInfo(0).IsTag("Hiding") && !playerDetectedByLocalCamera && !Player.player.hide.iluminated;
 		}
 	}
 	

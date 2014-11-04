@@ -107,12 +107,11 @@ public class Aranha : Damager {
 	void attackInstance(){
 		if(++shotCooldownCount >= shotCooldown) shotCooldownCount = 0;
 		if(shotCooldownCount<= 0){
-			int direction = (int)Mathf.Sign(transform.localScale.x);
-			GameObject bullet = Instantiate(bulletType,bulletSpawner.transform.position,Quaternion.identity) as GameObject;
-			Gunshot gunshot = bullet.GetComponent<Gunshot>();
-			gunshot.speed *= direction;
-			gunshot.rotation = new Vector2(Mathf.Cos(spiderArm.transform.localEulerAngles.z* Mathf.Deg2Rad),Mathf.Sin(spiderArm.transform.localEulerAngles.z* Mathf.Deg2Rad)*direction);
-			bullet.transform.localScale = new Vector3(bullet.transform.localScale.x*direction,bullet.transform.localScale.y,bullet.transform.localScale.z);
+			bulletType.GetComponent<Gunshot>().copyBullet(
+				bulletSpawner.transform.position,
+				spiderArm.transform.localEulerAngles.z,
+				(int)Mathf.Sign(transform.localScale.x)<0
+			);
 
 			soundToPlay = SpiderSound.gunshot;
 		}
