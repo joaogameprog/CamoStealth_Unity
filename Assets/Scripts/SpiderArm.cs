@@ -29,7 +29,7 @@ public class SpiderArm : MonoBehaviour {
 	//------------------------------------------------------------------------------------------------------------------
 	void FixedUpdate(){
 		SetAnimationFlags();
-		if(!aranha.playerDetected) return;
+		if(aranha.playerDetectionCount<1) return;
 		rotateArms();
 	}
 
@@ -78,7 +78,7 @@ public class SpiderArm : MonoBehaviour {
 	// Seta as flags de animaçao nos dois braços
 	//------------------------------------------------------------------------------------------------------------------
 	void SetAnimationFlags(){
-		animators[0].SetBool("Shooting",aranha.playerDetected);
-		animators[1].SetBool("Shooting",aranha.playerDetected);
+		animators[0].SetBool("Shooting",aranha.state == SpiderState.alert && aranha.playerInSight);
+		animators[1].SetBool("Shooting",aranha.state == SpiderState.alert && aranha.playerInSight);
 	}
 }

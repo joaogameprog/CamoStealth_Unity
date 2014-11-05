@@ -56,6 +56,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: PressButton
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -280,6 +286,26 @@ Transition:
     m_ConditionEvent: SpeedX
     m_EventTreshold: 0
     m_ExitTime: .75
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110155901
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110219619}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: PressButton
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -660,6 +686,22 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: Jumping
+--- !u!1102 &110219619
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PressingButton
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 7b5ef2e546053904db86856b841dce4b, type: 2}
+  - {fileID: 0}
+  m_ParentStateMachine: {fileID: 110742505}
+  m_Position: {x: -960, y: -96, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: Button
 --- !u!1102 &110220808
 State:
   m_ObjectHideFlags: 3
@@ -775,6 +817,7 @@ StateMachine:
       second:
       - {fileID: 110139252}
       - {fileID: 110176468}
+      - {fileID: 110155901}
     data:
       first: {fileID: 110200000}
       second:
@@ -843,6 +886,7 @@ StateMachine:
   - {fileID: 110213891}
   - {fileID: 110212816}
   - {fileID: 110220808}
+  - {fileID: 110219619}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:

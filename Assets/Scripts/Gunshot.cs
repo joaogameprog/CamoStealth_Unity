@@ -28,7 +28,7 @@ public class Gunshot : Damager {
 	// Update da bala. Incrementa a posiçao dela de acordo com a velocidade, rotaçao e sentido
 	//------------------------------------------------------------------------------------------------------------------
 	void Update () {
-		this.transform.position += new Vector3(speed*rotation.x,speed*rotation.y,0);
+		//this.transform.position += new Vector3(speed*rotation.x,speed*rotation.y,0);
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -61,5 +61,7 @@ public class Gunshot : Damager {
 				rotation*(revertDirection?-1.0f:1.0f) //Inverte a rotaçao caso a direçao da bala seja reversa
 			)
 		);
+
+		bullet.GetComponent<Rigidbody2D>().velocity = bullet.rotation * speed * (revertDirection?-1:1);
 	}
 }

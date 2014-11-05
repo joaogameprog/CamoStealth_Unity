@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\CollisionCheckerDown.cs" />
      <Compile Include="Assets\Scripts\Damager.cs" />
      <Compile Include="Assets\Scripts\DashImage.cs" />
+     <Compile Include="Assets\Scripts\Emoticon.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\Gunshot.cs" />
      <Compile Include="Assets\Scripts\HideSpot.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\Paralax.cs" />
+     <Compile Include="Assets\Scripts\Platform.cs" />
      <Compile Include="Assets\Scripts\Player Modules\DamageModule.cs" />
      <Compile Include="Assets\Scripts\Player Modules\DashSkillModule.cs" />
      <Compile Include="Assets\Scripts\Player Modules\HideSkillModule.cs" />
@@ -86,6 +88,8 @@
      <Compile Include="Assets\Scripts\SecurityCamera.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\SpiderArm.cs" />
+     <Compile Include="Assets\Scripts\SpiderCollisionChecker.cs" />
+     <Compile Include="Assets\Scripts\SpiderEars.cs" />
      <Compile Include="Assets\Scripts\SpiderVision.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

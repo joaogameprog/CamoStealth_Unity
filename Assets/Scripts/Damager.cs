@@ -7,10 +7,11 @@ using System.Collections;
 
 public abstract class Damager : MonoBehaviour {
 
-	public float damage = 10;            // Quantidade de dano causado por este objeto
-	private bool hasHitPlayer = false;   // Flag que armazena a informaçao se o jogador ja foi atingido por este objeto
-	public float knockbackPower = 1;     // Força com que o personagem eh empurrado para tras quando eh atingido
-	public bool deleteOnTouch = true;    // Caso seja true, este objeto eh deletado apos causar dano no player (ex, projeteis)
+	public float damage = 10;             // Quantidade de dano causado por este objeto
+	private bool hasHitPlayer = false;    // Flag que armazena a informaçao se o jogador ja foi atingido por este objeto
+	public float knockbackPower = 1;      // Força com que o personagem eh empurrado para tras quando eh atingido
+	public bool deleteOnTouch = true;     // Caso seja true, este objeto eh deletado apos causar dano no player (ex, projeteis)
+	public bool ignoreHiding = false;     // caso seja true, este objeto causa dano mesmo quando o personagem estiver oculto
 
 	void OnTriggerStay2D(Collider2D obj){
 		if(!hasHitPlayer && obj.tag == "Player"){
@@ -21,6 +22,7 @@ public abstract class Damager : MonoBehaviour {
 			}
 		}
 		if(deleteOnTouch && obj.tag == "Platform") Destroy(gameObject);
+		//if(obj.tag == "Platform" && deleteOnPlatform)
 	}
 	
 	void OnTriggerExit2D(Collider2D obj){

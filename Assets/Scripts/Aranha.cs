@@ -15,12 +15,27 @@ public class Aranha : Damager {
 	public float speed = 0.02f;                            // Velocidade de movimento da aranha
 	public float walkRange = 6;                            // Distancia percorrida pela aranha quando ela esta andando
 	public int restTime = 300;                             // Tempo que aranha fica parada
-	public int initialXPosition;                           // Posiçao incial da aranha
-	public int resting = 0;                                // Contador do tempo que a aranha esta parada
+	public float initialXPosition;                         // Posiçao incial da aranha
+	public int restCount = 0;                              // Contador do tempo que a aranha esta parada
+	public int returningDelayTime = 20;                    // Tempo que a aranha fica olhando pro nada depois que perde o jogador de vista
+	private int returningDelayCount = 0;                   // Contador do tempo de delay de retorno
 
-	//Detecçao
-	public bool playerDetected = false;                    // Detecçao do personagem
-	public SpiderState state = SpiderState.resting;        // Estado da aranha
+	// Colisao com plataforma
+	public bool platformColliding = false;                 // Checa se a aranha esta colidindo com uma parede                
+
+	//Estados
+	public SpiderState state; 						       // Estado da aranha
+
+	// Detecçao por visao
+	public bool playerInSight = false;                     // Checa se o personagem esta dentro do campo de visao da aranha
+	public float playerDetectionCount = 0;                 // Contador do estado de detecçao do jogador
+	public float detectionSpeed = 0.1f;                    // Velocidade de detecçao
+	public float undetectionSpeed = 0.005f;                // Velocidade em que a aranha perde os pontos de detecçao caso o personagem nao tenha sido totalmente detectado
+
+	//Detecçao por audiçao
+	public float hearing = 0;                              // Intensidade de som que a aranha esta ouvindo, funciona como um detectionSpeed alternativo
+	public float hearingAmplifier = 2;                     // Intensidade da audiçao da aranha. O valor captado pelo hearing eh elevado a este valor
+	public Vector3 lastPlayerHeardPosition;                // Ultima posiçao do jogador que a aranha percebeu
 
 	// Ataque
 	public GameObject bulletType = null;                   // GameObject de bala disparado pela aranha
@@ -28,6 +43,12 @@ public class Aranha : Damager {
 	private float shotCooldownCount = 0;                   // Contador do tempo de cooldown para que a aranha atire novamente
 	public float ArmMaxRotationSpeed = 1.0f;			   // Velocidade maxima de rotaçao dos braços
 	public GameObject bulletSpawner;            	       // Objeto onde as balas spawnam
+	
+	//Emoticons
+	public GameObject wut;                                 // Interrogaçao
+	private bool wuted = false;                            // Bloqueio do emoticon Interrogaçao
+	public GameObject hey;                                 // Exclamaçao
+	private bool heyed = false;                            // Bloqueio do emoticon exclamaçao
 
 	//som
 	public AudioClip shootingAudio;                        // Som dos tiros da aranha
@@ -45,11 +66,10 @@ public class Aranha : Damager {
 		animator = GetComponent<Animator>();
 		sr = GetComponent<SpriteRenderer>();
 		setColorOnChildren();
-		initialXPosition = (int)transform.position.x;
+		initialXPosition = transform.position.x;
 		if(restTime <= 0) restTime = 1;
 		vision = GetComponentInChildren<SpiderVision>();
 		visionSprite = vision.gameObject.GetComponent<SpriteRenderer>();
-
 	}
 
 	void Start(){
@@ -59,16 +79,52 @@ public class Aranha : Damager {
 	//------------------------------------------------------------------------------------------------------------------
 	// Update da aranha - Checa todos os comandos e açoes
 	//------------------------------------------------------------------------------------------------------------------
-	void FixedUpdate () {
+	void LateUpdate () {
 		if(Exit.victory) return;
-		if(!playerDetected){
+		switch(state){
+		case SpiderState.normal:
+			returningDelayCount = 0;
 			normalInstance();
-		}else{
-			attackInstance();
+			break;
+		case SpiderState.alert:
+			alertInstance();
+			break;
+		case SpiderState.returning:
+			returningDelayCount = 0;
+			returningInstance();
+			break;
 		}
+		incrementDetectionCount();
 		playSound();
-		animator.SetInteger("Resting",resting);
-		animator.SetBool("PlayerDetected",playerDetected);
+		setSightColor();
+		animator.SetBool("Resting",state == SpiderState.returning ? false : state == SpiderState.alert? ((playerDetectionCount <= 0 && state != SpiderState.normal)?true:false) : restCount != 0);
+		animator.SetBool("PlayerDetected",state == SpiderState.alert && playerInSight);
+
+	}
+
+	//------------------------------------------------------------------------------------------------------------------
+	// incrementa o valor de detecçao
+	//------------------------------------------------------------------------------------------------------------------
+	void incrementDetectionCount(){
+		float previousCount = playerDetectionCount;
+		playerDetectionCount = Mathf.Clamp(playerDetectionCount + (playerInSight? detectionSpeed:0) + (hearing>0? hearing:0),0.0f,1.0f);
+		if(playerDetectionCount >= 1){
+			callHey();
+			state = SpiderState.alert;
+			returningDelayCount = returningDelayTime;
+		}
+		if(playerDetectionCount <= 0 && state != SpiderState.normal){
+			heyed = false;
+			callWut();
+			if(--returningDelayCount <= 0){
+				state = SpiderState.returning;
+			}
+		}
+
+		if(previousCount != playerDetectionCount)
+			setSightColor();
+		else
+			playerDetectionCount = Mathf.Clamp(playerDetectionCount - undetectionSpeed,0.0f,1.0f);
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -90,57 +146,76 @@ public class Aranha : Damager {
 	//------------------------------------------------------------------------------------------------------------------
 	void normalInstance(){
 		shotCooldownCount = 0;
-		if(resting > 0){
-			if(--resting == 0){
-				transform.localScale = new Vector3(transform.localScale.x*-1,transform.localScale.y,transform.localScale.z);
+		if(restCount > 0){
+			if(--restCount == 0){
+				transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
 			}
 		}else{
-			transform.position += new Vector3(speed*Mathf.Sign(transform.localScale.x),0,0);
-			if((int)transform.position.x == initialXPosition+(Mathf.Sign(transform.localScale.x)>=0?walkRange:0))
-				resting = restTime;
+			float destination = initialXPosition + ((transform.localScale.x > 0 && walkRange > 0)?walkRange : 0);
+			float distance = destination - transform.position.x;
+			float increment = Mathf.Clamp(distance,-speed,speed);
+			transform.position += new Vector3(increment,0,0);
+			if(transform.position.x == destination)
+				restCount = restTime;
 		}
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
-	// Instancia de ataque da aranha, atirando no jogador
+	// Instancia de alerta da aranha
 	//------------------------------------------------------------------------------------------------------------------
-	void attackInstance(){
+	void alertInstance(){
+		// Faz a aranha olhar para o jogador
+		if(lastPlayerHeardPosition.x > transform.position.x != transform.localScale.x > 0)
+			transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
+
+		if(playerInSight && !Player.player.hide.trulyHiding)
+			shootAtPlayer();
+		else
+			searchForPlayer();
+	}
+
+	//------------------------------------------------------------------------------------------------------------------
+	// Instancia de alerta da aranha
+	//------------------------------------------------------------------------------------------------------------------
+	void returningInstance(){
+		// Faz a aranha olhar para a posiçao inicial
+		if(lastPlayerHeardPosition.x < initialXPosition != transform.localScale.x > 0)
+			transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
+
+		if(!platformColliding){
+			float increment = Mathf.Clamp(initialXPosition - lastPlayerHeardPosition.x,-speed,speed);
+			transform.position += new Vector3(increment,0,0);
+		}
+		if(transform.position.x == initialXPosition){
+			Instantiate(wut,transform.position + new Vector3(0,0.5f,0),Quaternion.identity);
+			state = SpiderState.normal;
+			wuted = false;
+			returningDelayCount = 0;
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------------------------
+	// A aranha atira no jogador
+	//------------------------------------------------------------------------------------------------------------------
+	void shootAtPlayer(){
 		if(++shotCooldownCount >= shotCooldown) shotCooldownCount = 0;
 		if(shotCooldownCount<= 0){
 			bulletType.GetComponent<Gunshot>().copyBullet(
 				bulletSpawner.transform.position,
 				spiderArm.transform.localEulerAngles.z,
 				(int)Mathf.Sign(transform.localScale.x)<0
-			);
-
+				);
 			soundToPlay = SpiderSound.gunshot;
 		}
-		
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
-	// Troca o estado da aranha, fazendo os ajustes necessarios
+	// A aranha procura pelo jogador
 	//------------------------------------------------------------------------------------------------------------------
-	public void setState(SpiderState newState){
-		if(state == newState) return;
-		switch(newState){
-		case SpiderState.searching:
-			visionSprite.color = Color.yellow;
-			break;
-		case SpiderState.following:
-			visionSprite.color = Color.red;
-			break;
-		case SpiderState.shooting:
-			visionSprite.color = Color.red;
-			break;
-		case SpiderState.walking:
-			visionSprite.color = Color.white;
-			break;
-		default:
-			visionSprite.color = Color.white;
-			break;
-		}
-		state = newState;
+	void searchForPlayer(){
+		if(returningDelayCount > 0 && wuted || platformColliding) return;
+		if(!(transform.position.x > lastPlayerHeardPosition.x-0.5f && transform.position.x < lastPlayerHeardPosition.x+0.5f))
+			transform.position += new Vector3(speed*Mathf.Sign(transform.localScale.x),0,0);
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -152,6 +227,30 @@ public class Aranha : Damager {
 			renderer.color = sr.color;
 	}
 
+	//------------------------------------------------------------------------------------------------------------------
+	// seta a cor do campo de visao
+	//------------------------------------------------------------------------------------------------------------------
+	void setSightColor(){
+		visionSprite.color = new Color(1,1,1-playerDetectionCount);
+	}
+
+	//------------------------------------------------------------------------------------------------------------------
+	// Exibe o emoticon Hey
+	//------------------------------------------------------------------------------------------------------------------
+	void callHey(){
+		if(heyed) return;
+		Instantiate(hey,transform.position + new Vector3(0,0.5f,0),Quaternion.identity);
+		heyed = true;
+	}
+
+	//------------------------------------------------------------------------------------------------------------------
+	// Exibe o emoticon Wut
+	//------------------------------------------------------------------------------------------------------------------
+	void callWut(){
+		if(wuted) return;
+		Instantiate(wut,transform.position + new Vector3(0,0.5f,0),Quaternion.identity);
+		wuted = true;
+	}
 }
 
 // Enum que indica qual som deve ser tocado
@@ -163,9 +262,7 @@ public enum SpiderSound{
 
 // Enum que indica o estado da aranha
 public enum SpiderState{
-	resting,
-	walking,
-	searching,
-	following,
-	shooting
+	normal,
+	alert,
+	returning
 }

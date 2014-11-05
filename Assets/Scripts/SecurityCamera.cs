@@ -67,7 +67,10 @@ public class SecurityCamera : MonoBehaviour {
 	//------------------------------------------------------------------------------------------------------------------
 	void callSpiders(){
 		foreach(GameObject aranha in aranhas){
-			aranha.GetComponent<Aranha>().setState(SpiderState.searching);
+			Aranha script = aranha.GetComponent<Aranha>();
+			script.state  = SpiderState.alert;
+			script.lastPlayerHeardPosition = Player.player.transform.position;
+			script.playerDetectionCount = 1;
 		}
 	}
 
@@ -95,7 +98,11 @@ public class SecurityCamera : MonoBehaviour {
 			break;
 		}
 
-		if(playerDetected) return;
+		if(playerDetected){
+			if(playerInSight)
+				callSpiders();
+			return;
+		}
 
 		if(playerInSight)
 			CommandDetect();

@@ -1,0 +1,506 @@
+fileFormatVersion: 2
+guid: bc8afb202dcf2174fbdcce2ad45fa497
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: elevatorDoorFront_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_2
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_3
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_4
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_5
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_6
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_7
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_8
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_9
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1773
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_11
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_12
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_13
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_14
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_15
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_16
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_17
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_18
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_19
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1498
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_21
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_22
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_23
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_24
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_25
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_26
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_27
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_28
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_29
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1223
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_31
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_32
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_33
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_34
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_35
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_36
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_37
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_38
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_39
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 948
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 673
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_41
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 673
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_42
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 673
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_43
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 673
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_44
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 673
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: elevatorDoorFront_45
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 673
+        width: 203
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

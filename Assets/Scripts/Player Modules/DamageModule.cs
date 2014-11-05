@@ -51,7 +51,7 @@ public class DamageModule : PlayerCommand {
 	GUIStyle gs = new GUIStyle();
 	
 	void OnGUI(){
-		GUI.Label(new Rect(100,100,100,100),Health.ToString() + "\n" + new Vector2(Screen.width,Screen.height),gs);
+		GUI.Label(new Rect(100,100,100,100),Health.ToString() + "\n" + new Vector2(Screen.width,Screen.height) + "\n" + rb.velocity.magnitude,gs);
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -61,7 +61,6 @@ public class DamageModule : PlayerCommand {
 		invencibilityEffect();
 		base.runCommand();
 		damager = null;
-
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -71,7 +70,7 @@ public class DamageModule : PlayerCommand {
 		if(death) return false; // bloqueia o comando caso o personagem esteja morto
 		if(--damageTimeCount>0) return false;
 		if(--invencibilityCount>0) return false;
-		if(hide.trulyHiding) return false;
+		if(hide.trulyHiding && (damager == null? true : !damager.ignoreHiding) ) return false;
 		return damager != null;
 	}
 

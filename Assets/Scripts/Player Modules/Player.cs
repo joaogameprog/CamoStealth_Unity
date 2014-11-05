@@ -24,7 +24,7 @@ public class Player : PlayerBehaviour {
 	// Update do personagem - Checa todos os comandos e açoes
 	//------------------------------------------------------------------------------------------------------------------
 	void FixedUpdate () {
-		if(Exit.victory) return;
+		if(Exit.victory){victory(); return;}
 		dmg.runCommand();
 
 		hide.runCommand();
@@ -56,4 +56,30 @@ public class Player : PlayerBehaviour {
 		anim.SetInteger("SpeedX",(int)(rigidbody2D.velocity.x*100));
 	}
 
+	void victory(){
+		anim.SetBool("PressButton",true);
+		if(!initiatedVictory){
+
+			rb.velocity = new Vector2(0,-1);
+			transform.position += new Vector3(0,0,0.45f);
+			initiatedVictory = true;
+			stage2Count = 100;
+		}else{
+			if(stage2Count <= 50)
+				Exit.exit.GetComponent<Animator>().SetBool("Close",true);
+			if(--stage2Count <= 0)
+				stage2 = true;
+			if(stage2Count <= -30)
+				Exit.exit.GetComponent<Animator>().SetBool("Open",true);
+		}
+		if(stage2){
+			sr.color = sr.color - new Color(0,0,0,0.05f);
+			if(sr.color.a <= 0) Exit.exit.GetComponent<Exit>().enterElevator = true;
+		}
+
+	}
+
+	bool initiatedVictory = false;
+	int stage2Count = 0;
+	bool stage2 = false;
 } 
