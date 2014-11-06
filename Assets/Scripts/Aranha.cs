@@ -61,6 +61,10 @@ public class Aranha : Damager {
 	private SpiderVision vision;                           // Campo de visao da aranha
 	private SpriteRenderer visionSprite;                   // SpriteRenderer do compo de visao da aranha
 
+	// Morte
+	public bool dead = false;
+	private int deathCount = 100;
+
 	//------------------------------------------------------------------------------------------------------------------
 	// Seta os valores inciais da aranha
 	//------------------------------------------------------------------------------------------------------------------
@@ -82,6 +86,12 @@ public class Aranha : Damager {
 	// Update da aranha - Checa todos os comandos e açoes
 	//------------------------------------------------------------------------------------------------------------------
 	void LateUpdate () {
+		if(dead){
+			sr.color -= new Color(0.05f,0.05f,0.05f,0.05f);
+			setColorOnChildren();
+			if(--deathCount <= 0) Destroy(gameObject);
+			return;
+		}
 		if(Exit.victory) return;
 		switch(state){
 		case SpiderState.normal:
@@ -265,6 +275,19 @@ public class Aranha : Damager {
 		Instantiate(wut,transform.position + new Vector3(0,0.5f,0),Quaternion.identity);
 		wuted = true;
 	}
+
+	//------------------------------------------------------------------------------------------------------------------
+	// A aranha morre
+	//------------------------------------------------------------------------------------------------------------------
+	public void die(){
+		if(dead) return;
+		dead = true;
+		soundToPlay = SpiderSound.death;
+		if(audio.clip != roarAudio) audio.clip = roarAudio;
+		audio.pitch = 1.0f;
+		audio.Play();
+	}
+
 }
 
 // Enum que indica qual som deve ser tocado

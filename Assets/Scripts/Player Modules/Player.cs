@@ -27,11 +27,14 @@ public class Player : PlayerBehaviour {
 		if(Exit.victory){victory(); return;}
 		dmg.runCommand();
 
-		hide.runCommand();
-		wall.runCommand();
-		dash.runCommand();
-		jump.runCommand();
-		move.runCommand();
+		punch.runCommand();
+		if(!punch.isPunching){
+			hide.runCommand();
+			wall.runCommand();
+			dash.runCommand();
+			jump.runCommand();
+			move.runCommand();
+		}
 
 		sound.runCommand();
 		updateAnimationFlags();
@@ -46,6 +49,7 @@ public class Player : PlayerBehaviour {
 		anim.SetBool("PlatformColliding",wall.platformColliding);
 		anim.SetBool("Damage",dmg.damageTimeCount>0 && !dmg.death);
 		anim.SetBool("Death",dmg.death);
+		anim.SetBool("isPunching", punch.isPunching);
 	}
 	
 	//------------------------------------------------------------------------------------------------------------------

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SecretPassage : MonoBehaviour {
 
-	bool playerInside = false;
+	public static bool playerInside = false;
 
 	void OnTriggerStay2D(Collider2D obj){
 		if(obj.tag == "Player"){
@@ -18,6 +18,11 @@ public class SecretPassage : MonoBehaviour {
 	}
 
 	void Update(){
+		if(renderer.material.shader.name == "Diffuse" && renderer.material.color.a < 1)
+			renderer.material.shader = Shader.Find("Transparent/Diffuse");
+		if(renderer.material.shader.name == "Transparent/Diffuse" && renderer.material.color.a >= 1)
+			renderer.material.shader = Shader.Find("Diffuse");
+
 		if(playerInside)
 			if(renderer.material.color.a > 0.5f)
 				renderer.material.color -= new Color(0,0,0,0.05f);

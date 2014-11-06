@@ -23,6 +23,7 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 	private WallSkillModule myWall;
 	private DashSkillModule myDash;
 	private JumpSkillModule myJump;
+	private PunchSkillModule myPunch;
 	private DamageModule myDamage;
 	private SoundModule mySound;
 	private Camera myCam;
@@ -156,6 +157,18 @@ public abstract class PlayerBehaviour : MonoBehaviour{
 		}
 		set{
 			mySound = value;
+		}
+	}
+
+	public PunchSkillModule punch{
+		get{
+			if(myPunch == null){
+				myPunch = GetComponent<PunchSkillModule>();
+			}
+			return myPunch;
+		}
+		set{
+			myPunch = value;
 		}
 	}
 }

@@ -38,15 +38,15 @@ public class Exit : MonoBehaviour {
 		}
 	}
 
-	/*Rect windowRect = new Rect(Screen.width/10 * 4,Screen.height/20 *8,Screen.width/10 *2,Screen.height/20 *2);
+	Rect windowRect = new Rect(Screen.width/10 * 4,Screen.height/20 *8,Screen.width/10 *2,Screen.height/20 *2);
 	void OnGUI() {
 		// Register the window. Notice the 3rd parameter 
-		if(victory){
+		if(fakeLeon_sr.color.a >= 1){
 			windowRect = GUI.Window (0, windowRect, windowFinnish, MainMenu.English?"End":"Fim");
 			if((Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.Backspace) || Input.GetKey(KeyCode.Space)|| Input.GetKey(KeyCode.KeypadEnter)))
 				Application.LoadLevel("MainMenuScreen");
 		}
 	}
 
-	void windowFinnish(int windowId){}*/
+	void windowFinnish(int windowId){}
 }

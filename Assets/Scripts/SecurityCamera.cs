@@ -67,6 +67,7 @@ public class SecurityCamera : MonoBehaviour {
 	//------------------------------------------------------------------------------------------------------------------
 	void callSpiders(){
 		foreach(GameObject aranha in aranhas){
+			if(aranha == null) break;
 			Aranha script = aranha.GetComponent<Aranha>();
 			script.state  = SpiderState.alert;
 			script.lastPlayerHeardPosition = Player.player.transform.position;
@@ -141,6 +142,7 @@ public class SecurityCamera : MonoBehaviour {
 	// Aumenta o valor de detecçao desta camera
 	//------------------------------------------------------------------------------------------------------------------
 	void CommandDetect(){
+		if(SecretPassage.playerInside) return;
 		changeAngle(positions[currentPosition]);
 		if((detectionCount += detectionSpeed) > 1.0f){ // Detectado
 			detectionCount = 1.0f;
