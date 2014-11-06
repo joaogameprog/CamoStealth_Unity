@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Leon_Punch
+  serializedVersion: 4
+  m_AnimationType: 2
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 1d6fef6e328049e4b808bb587776b1c3, type: 3}
+    - time: .0833333358
+      value: {fileID: 21300000, guid: f76f14c39c2b1e042ba45f24a6d1fac4, type: 3}
+    - time: .166666672
+      value: {fileID: 21300000, guid: c347889d596e76c419f948c286b2c85f, type: 3}
+    - time: .25
+      value: {fileID: 21300000, guid: 03bde3eb55e36eb44a432f9a740a7ec1, type: 3}
+    - time: .333333343
+      value: {fileID: 21300000, guid: 58685e055d040a24689c8895a7b13464, type: 3}
+    - time: .416666657
+      value: {fileID: 21300000, guid: e24308eda5945e34aa24f52a80d1f148, type: 3}
+    - time: .5
+      value: {fileID: 21300000, guid: 914f3d230627b084c9d96bb7c1589f6c, type: 3}
+    - time: .583333313
+      value: {fileID: 21300000, guid: 26db3ccdf5c8ce14ea1af5079d0b45e7, type: 3}
+    - time: .666666687
+      value: {fileID: 21300000, guid: 474266830d3313e4e822f9b93bccae91, type: 3}
+    - time: .75
+      value: {fileID: 21300000, guid: 236be360949d09841bf3433cd20435d6, type: 3}
+    - time: .833333313
+      value: {fileID: 21300000, guid: 20dc5e89836d5bf4aa5970cc88276abf, type: 3}
+    - time: .916666687
+      value: {fileID: 21300000, guid: 8223567644e86e942afb2cd9e705a491, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: fe3bf133fbcba5c40bdbbfb3e8b995ff, type: 3}
+    - time: 1.08333337
+      value: {fileID: 21300000, guid: 7781cf3bf99acb643b92500d658062b9, type: 3}
+    - time: 1.16666663
+      value: {fileID: 21300000, guid: 079543fb7e5e2274aa063820fedfd4c3, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: 1.25
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

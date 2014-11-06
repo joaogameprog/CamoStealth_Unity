@@ -48,12 +48,6 @@ public class DamageModule : PlayerCommand {
 	[HideInInspector] public Damager damager = null;       // Referencia ao objeto causador de dano 
 	HudManager hudManager;
 
-	GUIStyle gs = new GUIStyle();
-	
-	void OnGUI(){
-		GUI.Label(new Rect(100,100,100,100),Health.ToString() + "\n" + new Vector2(Screen.width,Screen.height) + "\n" + rb.velocity.magnitude,gs);
-	}
-
 	//------------------------------------------------------------------------------------------------------------------
 	// Adciona o metodo que chama a animaçao de invencibilidade ao metodo principal
 	//------------------------------------------------------------------------------------------------------------------

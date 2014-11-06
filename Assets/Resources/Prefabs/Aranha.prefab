@@ -434,6 +434,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!114 &11400004
 MonoBehaviour:

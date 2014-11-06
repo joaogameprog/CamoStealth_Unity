@@ -25,6 +25,7 @@ public class Aranha : Damager {
 
 	//Estados
 	public SpiderState state; 						       // Estado da aranha
+	public Vector3 lastPosition;                           // Ultima posiçao da aranha
 
 	// Detecçao por visao
 	public bool playerInSight = false;                     // Checa se o personagem esta dentro do campo de visao da aranha
@@ -53,6 +54,7 @@ public class Aranha : Damager {
 	//som
 	public AudioClip shootingAudio;                        // Som dos tiros da aranha
 	public AudioClip roarAudio;                            // Som de morte da aranha
+	public AudioClip emoticonAudio;                        // Som das exclamaçoes e interrogaçoes
 	public SpiderSound soundToPlay = SpiderSound.nothing;  // Som que deve ser tocado no frame seguinte
 
 	// Campo de visao
@@ -97,9 +99,9 @@ public class Aranha : Damager {
 		incrementDetectionCount();
 		playSound();
 		setSightColor();
-		animator.SetBool("Resting",state == SpiderState.returning ? false : state == SpiderState.alert? ((playerDetectionCount <= 0 && state != SpiderState.normal)?true:false) : restCount != 0);
+		animator.SetBool("Resting",lastPosition == transform.position);//state == SpiderState.returning ? false : state == SpiderState.alert? ((playerDetectionCount <= 0 && state != SpiderState.normal)?true:false) : restCount != 0);
 		animator.SetBool("PlayerDetected",state == SpiderState.alert && playerInSight);
-
+		lastPosition = transform.position;
 	}
 
 	//------------------------------------------------------------------------------------------------------------------
@@ -135,6 +137,16 @@ public class Aranha : Damager {
 		case SpiderSound.gunshot:
 			if(audio.clip != shootingAudio) audio.clip = shootingAudio;
 			audio.pitch = Random.Range(1.0f,2.0f);
+			audio.Play();
+			break;
+		case SpiderSound.hey:
+			if(audio.clip != emoticonAudio) audio.clip = emoticonAudio;
+			audio.pitch = Random.Range(2.0f,3.0f);
+			audio.Play();
+			break;
+		case SpiderSound.wut:
+			if(audio.clip != emoticonAudio) audio.clip = emoticonAudio;
+			audio.pitch = Random.Range(0.5f,1.5f);
 			audio.Play();
 			break;
 		}
@@ -239,6 +251,7 @@ public class Aranha : Damager {
 	//------------------------------------------------------------------------------------------------------------------
 	void callHey(){
 		if(heyed) return;
+		soundToPlay = SpiderSound.hey;
 		Instantiate(hey,transform.position + new Vector3(0,0.5f,0),Quaternion.identity);
 		heyed = true;
 	}
@@ -248,6 +261,7 @@ public class Aranha : Damager {
 	//------------------------------------------------------------------------------------------------------------------
 	void callWut(){
 		if(wuted) return;
+		soundToPlay = SpiderSound.wut;
 		Instantiate(wut,transform.position + new Vector3(0,0.5f,0),Quaternion.identity);
 		wuted = true;
 	}
@@ -257,6 +271,8 @@ public class Aranha : Damager {
 public enum SpiderSound{
 	nothing,
 	gunshot,
+	hey,
+	wut,
 	death
 }
 

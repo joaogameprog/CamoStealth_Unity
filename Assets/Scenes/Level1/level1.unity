@@ -1937,6 +1937,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -1952,6 +1953,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &185629500
 Animator:
@@ -3940,6 +3942,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -3955,6 +3958,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &361060023
 Animator:
@@ -7442,7 +7446,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef42839802141314485910b968193fd2, type: 2}
+  - {fileID: 2100000, guid: 6ff7a8c3accada547b4a2e3e1bf4bc7c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8672,6 +8676,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -8687,6 +8692,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &724106712
 Animator:
@@ -9261,6 +9267,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 096054389013bd94b94675df07ffdec3, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0a7276fc5e1e3949ab24172ce3047b8, type: 2}
     m_RemovedComponents: []
     m_DeprecatedTransformRoot: {fileID: 0}
     m_DeprecatedTransformMap: {}
@@ -9554,6 +9564,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -9569,6 +9580,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &764015630
 Animator:
@@ -10114,6 +10126,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -10129,6 +10142,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &820177364
 Animator:
@@ -10987,7 +11001,7 @@ Transform:
   m_PrefabInternal: {fileID: 1658537746}
   m_GameObject: {fileID: 861768058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7650001, y: -2.5, z: -5.33979988}
+  m_LocalPosition: {x: 2.7650001, y: -2.5, z: -5.36999989}
   m_LocalScale: {x: 20, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1508491681}
@@ -11202,7 +11216,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 91b29aa9b25b9de4ab09b93778593ad2, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ef42839802141314485910b968193fd2, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ff7a8c3accada547b4a2e3e1bf4bc7c, type: 2}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 91b29aa9b25b9de4ab09b93778593ad2, type: 2}
     m_DeprecatedTransformRoot: {fileID: 0}
@@ -14133,7 +14147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 096054389013bd94b94675df07ffdec3, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_DeprecatedTransformRoot: {fileID: 0}
@@ -17374,7 +17388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f11b9ba2b1172c04f8fda5498fd09d6d, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f11b9ba2b1172c04f8fda5498fd09d6d, type: 2}
       propertyPath: m_LocalScale.x
@@ -20056,6 +20070,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -20071,6 +20086,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &1590229464
 Animator:
@@ -20947,6 +20963,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -20962,6 +20979,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &1655677838
 Animator:
@@ -21077,7 +21095,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0483e4242bcb54d45be952ae92304ef0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5.33979988
+      value: -5.36999989
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0483e4242bcb54d45be952ae92304ef0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -21318,6 +21336,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -21333,6 +21352,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &1666469395
 Animator:
@@ -22237,7 +22257,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ba14f2ecaa36ddd47a6c9fad30376786, type: 2}
+  - {fileID: 2100000, guid: a0a7276fc5e1e3949ab24172ce3047b8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -22542,6 +22562,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -22557,6 +22578,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!82 &1750430956
 AudioSource:
@@ -26099,6 +26121,7 @@ MonoBehaviour:
   returningDelayTime: 20
   platformColliding: 0
   state: 0
+  lastPosition: {x: 0, y: 0, z: 0}
   playerInSight: 0
   playerDetectionCount: 0
   detectionSpeed: .100000001
@@ -26114,6 +26137,7 @@ MonoBehaviour:
   hey: {fileID: 100000, guid: f3333cefe6a34e444a080187699516da, type: 2}
   shootingAudio: {fileID: 8300000, guid: 982f26aba77140c49addde000873e957, type: 3}
   roarAudio: {fileID: 8300000, guid: eb1e92abe0ebeac40bdf63c1e54265da, type: 3}
+  emoticonAudio: {fileID: 8300000, guid: 8ad2337784243034da5b16b4249ccd89, type: 3}
   soundToPlay: 0
 --- !u!95 &1983679112
 Animator:
