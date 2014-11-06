@@ -1,6 +1,9 @@
 fileFormatVersion: 2
 guid: 1a59cd29336b892459ec817f2dce7da0
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: spiderShootArmsFront_0
+    21300002: spiderShootArmsFront_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

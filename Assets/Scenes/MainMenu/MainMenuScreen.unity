@@ -240,6 +240,165 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a3d529d67f091ab40869ff0087ad4dd7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &155840606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 155840607}
+  - 23: {fileID: 155840615}
+  - 102: {fileID: 155840614}
+  - 114: {fileID: 155840613}
+  - 61: {fileID: 155840612}
+  - 114: {fileID: 155840611}
+  - 114: {fileID: 155840610}
+  - 114: {fileID: 155840609}
+  - 114: {fileID: 155840608}
+  m_Layer: 0
+  m_Name: BTN BACK
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &155840607
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.31739998, y: 2.04819989, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1492733950}
+  m_Father: {fileID: 1295949882}
+  m_RootOrder: 3
+--- !u!114 &155840608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77431643e9f6dd74da1d3ee7abcd9327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - Back
+  - Voltar
+--- !u!114 &155840609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45de26e63b962cf4e88c977c30abeb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 1295949881}
+--- !u!114 &155840610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245fe26ab9e900048bdd988d8504b41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  child: {fileID: 1492733951}
+--- !u!114 &155840611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e74b4191debc249b9d9e0f8565595a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &155840612
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1.02999997, y: .699999988}
+  m_Center: {x: -1.18743628e-08, y: -1.49930202e-09}
+--- !u!114 &155840613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1235405773, guid: 3d1605defe3bdba4ab1c452913391559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedProps: 0
+  combineTouches: 0
+  combineTouchesInterval: .300000012
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  numberOfTapsRequired: 1
+  timeLimit: Infinity
+  distanceLimit: Infinity
+--- !u!102 &155840614
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Text: Back
+  m_OffsetZ: 0
+  m_CharacterSize: .0299999993
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 100
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: f4e4586405eefbf4a846113d1bc03ac0, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &155840615
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155840606}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: f4e4586405eefbf4a846113d1bc03ac0, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 17061043
+  m_SortingOrder: 3
 --- !u!1 &210430280
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +961,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 352803398}
-  m_Text: "Espa\xE7o - Pular"
+  m_Text: Space - Jump
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1
@@ -885,7 +1044,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 384901242}
-  m_Text: 'Objetivo do jogo: Fugir da base das aranhas.'
+  m_Text: 'Objective: Flee from the spiders base.'
   m_OffsetZ: 0
   m_CharacterSize: .0250000004
   m_LineSpacing: 1
@@ -1522,7 +1681,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651923569}
-  m_Text: 'Controles:'
+  m_Text: 'Controls:'
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1
@@ -1792,6 +1951,7 @@ Transform:
   - {fileID: 1772517627}
   - {fileID: 609168345}
   - {fileID: 12447458}
+  - {fileID: 1295949882}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &785392225
@@ -1810,7 +1970,7 @@ GameObject:
   - 114: {fileID: 785392232}
   - 114: {fileID: 785392233}
   m_Layer: 0
-  m_Name: BTN CONTINUE
+  m_Name: BTN ABOUT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1880,7 +2040,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785392225}
-  m_Text: Continue
+  m_Text: About
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1
@@ -1938,8 +2098,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts:
-  - Continue
-  - Continuar
+  - About
+  - About
+--- !u!1 &805550691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 805550692}
+  - 23: {fileID: 805550696}
+  - 102: {fileID: 805550695}
+  - 114: {fileID: 805550694}
+  - 114: {fileID: 805550693}
+  m_Layer: 0
+  m_Name: CREDITS TEXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &805550692
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 805550691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.757539988, y: 2.08319998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1295949882}
+  m_RootOrder: 1
+--- !u!114 &805550693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 805550691}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77431643e9f6dd74da1d3ee7abcd9327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - ABOUT
+  - SOBRE
+--- !u!114 &805550694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 805550691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e74b4191debc249b9d9e0f8565595a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!102 &805550695
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 805550691}
+  m_Text: ABOUT
+  m_OffsetZ: 0
+  m_CharacterSize: .0299999993
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 100
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &805550696
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 805550691}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 17061043
+  m_SortingOrder: 6
 --- !u!1 &818296222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,7 +2296,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 818296222}
-  m_Text: Voltar
+  m_Text: Back
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1
@@ -2148,7 +2405,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819348199}
-  m_Text: Esquerda e Direita - Andar
+  m_Text: Left and Right - Walk
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1
@@ -2917,6 +3174,158 @@ MonoBehaviour:
   texts:
   - Back
   - Voltar
+--- !u!1 &1180991904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1180991905}
+  - 23: {fileID: 1180991911}
+  - 102: {fileID: 1180991910}
+  - 114: {fileID: 1180991909}
+  - 114: {fileID: 1180991908}
+  - 114: {fileID: 1180991907}
+  - 61: {fileID: 1180991906}
+  m_Layer: 0
+  m_Name: TEXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1180991905
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180991904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.01099992, y: .950760007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1295949882}
+  m_RootOrder: 2
+--- !u!61 &1180991906
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180991904}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 5.92999983, y: 5.26000023}
+  m_Center: {x: 2.9000001, y: -.689941406}
+--- !u!114 &1180991907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180991904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddaa4cc96e66e7946be9a395b61b3242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1180991908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180991904}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77431643e9f6dd74da1d3ee7abcd9327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - "Leon is a secret agent who was taken hostage by hostile while he was on his mission
+    to collect sensitive information from the enemy, captured, is taken to the base
+    of spiders and is thrown into the jail. In his cell Leon knows it is necessary
+    to escape as fast as possible of the enemy secret base. \r\nThe player must reach
+    the end of the stages without being perceived by the enemy, if detected, the enemies
+    attack the player, at this situation the player has the option to run or attack,
+    if attacking the enemy the player loses points at the end of the game. The range
+    of vision that the enemies can see the player can be viewed to be avoided. \r\nThere
+    are items that hinder the player in attempting to be stealthy, like lamps that
+    prevent the player from using camouflage, and cameras that warn the presence of
+    the main character when it enters your field of vision.\r\n"
+  - "Leon \xE9 um agente secreto que foi feito ref\xE9m pelos hostis enquanto estava
+    em sua miss\xE3o de coletar informa\xE7\xF5es sigilosas do inimigo, capturado,
+    \xE9 levado para a base das aranhas e \xE9 jogado no calabou\xE7o. Em sua cela
+    Leon sabe que \xE9 necess\xE1rio fugir o mais r\xE1pido poss\xEDvel da base secreta
+    dos inimigos.\r\nO jogador deve chegar at\xE9 o final das fases sem ser percebido
+    pelos inimigos, quando for detectado, os inimigos atacam o jogador, nesse momento
+    o jogador tem a op\xE7\xE3o de correr ou atacar, caso ataque o inimigo o jogador
+    tem menos pontos ao final do jogo. O raio de vis\xE3o que os inimigos podem enxergar
+    pode ser visualizado pelo jogador para ser evitado.\r\nH\xE1 itens que atrapalham
+    o jogador na tentativa de ser furtivo, como l\xE2mpadas que impedem o jogador
+    de usar a Camuflagem, e c\xE2meras que alertam a presen\xE7a do personagem principal
+    quando o mesmo entra no seu raio de vis\xE3o.\r\n"
+--- !u!114 &1180991909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180991904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e74b4191debc249b9d9e0f8565595a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!102 &1180991910
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180991904}
+  m_Text: "Leon is a secret agent who was taken hostage by hostile while he was on
+    his mission to collect sensitive information from the enemy, captured, is taken
+    to the base of spiders and is thrown into the jail. In his cell Leon knows it
+    is necessary to escape as fast as possible of the enemy secret base. \r\nThe player
+    must reach the end of the stages without being perceived by the enemy, if detected,
+    the enemies attack the player, at this situation the player has the option to
+    run or attack, if attacking the enemy the player loses points at the end of the
+    game. The range of vision that the enemies can see the player can be viewed to
+    be avoided. \r\nThere are items that hinder the player in attempting to be stealthy,
+    like lamps that prevent the player from using camouflage, and cameras that warn
+    the presence of the main character when it enters your field of vision.\r\n"
+  m_OffsetZ: 0
+  m_CharacterSize: .0199999996
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 100
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1180991911
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180991904}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 17061043
+  m_SortingOrder: 6
 --- !u!1 &1186446393
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,7 +3655,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1217729280}
-  m_Text: AJUDA
+  m_Text: HELP
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1
@@ -3453,6 +3862,37 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: deea59e11dbb79e428c631280cfe564f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1295949881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1295949882}
+  m_Layer: 0
+  m_Name: ABOUT SCREEN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1295949882
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295949881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1618871460}
+  - {fileID: 805550692}
+  - {fileID: 1180991905}
+  - {fileID: 155840607}
+  m_Father: {fileID: 730170934}
+  m_RootOrder: 3
 --- !u!1 &1351203475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3482,13 +3922,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnPlay: {fileID: 605050730}
-  btnContinue: {fileID: 785392229}
+  btnAbout: {fileID: 785392229}
   btnOptions: {fileID: 1887348292}
   btnHelp: {fileID: 315475185}
   btnCredits: {fileID: 1503369587}
   OptionsScreen: {fileID: 1772517626}
   HelpScreen: {fileID: 12447457}
   CreditsScreen: {fileID: 609168344}
+  AboutScreen: {fileID: 1295949881}
 --- !u!4 &1351203477
 Transform:
   m_ObjectHideFlags: 0
@@ -3577,7 +4018,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1403733395}
-  m_Text: Shift - Correr
+  m_Text: Shift - Dash
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1
@@ -3758,6 +4199,103 @@ MonoBehaviour:
   texts:
   - "Trabalho de Conclus\xE3o de Curso - Fatec S\xE3o Caetano - Jogos Digitais"
   - "Trabalho de Conclus\xE3o de Curso - Fatec S\xE3o Caetano - Jogos Digitais"
+--- !u!1 &1492733949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1492733950}
+  - 23: {fileID: 1492733954}
+  - 102: {fileID: 1492733951}
+  - 114: {fileID: 1492733953}
+  - 114: {fileID: 1492733952}
+  m_Layer: 0
+  m_Name: BTN BACK
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1492733950
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492733949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0900000036, y: .0700000003, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 155840607}
+  m_RootOrder: 0
+--- !u!102 &1492733951
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492733949}
+  m_Text: Voltar
+  m_OffsetZ: 0
+  m_CharacterSize: .0299999993
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 100
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: f4e4586405eefbf4a846113d1bc03ac0, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294935164
+--- !u!114 &1492733952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492733949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77431643e9f6dd74da1d3ee7abcd9327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - Back
+  - Voltar
+--- !u!114 &1492733953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492733949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e74b4191debc249b9d9e0f8565595a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1492733954
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492733949}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: f4e4586405eefbf4a846113d1bc03ac0, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 17061043
+  m_SortingOrder: -1
 --- !u!1 &1503369583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3970,6 +4508,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 835055622}
   m_RootOrder: 0
+--- !u!1 &1618871459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1618871460}
+  - 212: {fileID: 1618871462}
+  - 61: {fileID: 1618871461}
+  m_Layer: 0
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618871460
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1618871459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: -1.00999999, y: 1.00999987, z: 1.00999987}
+  m_Children: []
+  m_Father: {fileID: 1295949882}
+  m_RootOrder: 0
+--- !u!61 &1618871461
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1618871459}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 8, y: 4.80000019}
+  m_Center: {x: 0, y: 0}
+--- !u!212 &1618871462
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1618871459}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 17061043
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: deea59e11dbb79e428c631280cfe564f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1640881266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,7 +5130,7 @@ GameObject:
   - 114: {fileID: 1844937734}
   - 114: {fileID: 1844937737}
   m_Layer: 0
-  m_Name: BTN CONTINUE
+  m_Name: BTN ABOUT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4612,8 +5212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts:
-  - Continue
-  - Continuar
+  - About
+  - About
 --- !u!1 &1887348289
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,7 +5556,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062114430}
-  m_Text: Cima - Modo escondido
+  m_Text: Up - Stealth mode
   m_OffsetZ: 0
   m_CharacterSize: .0299999993
   m_LineSpacing: 1

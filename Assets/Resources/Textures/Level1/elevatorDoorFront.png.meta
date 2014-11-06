@@ -1,6 +1,53 @@
 fileFormatVersion: 2
 guid: bc8afb202dcf2174fbdcce2ad45fa497
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: elevatorDoorFront_0
+    21300002: elevatorDoorFront_1
+    21300004: elevatorDoorFront_2
+    21300006: elevatorDoorFront_3
+    21300008: elevatorDoorFront_4
+    21300010: elevatorDoorFront_5
+    21300012: elevatorDoorFront_6
+    21300014: elevatorDoorFront_7
+    21300016: elevatorDoorFront_8
+    21300018: elevatorDoorFront_9
+    21300020: elevatorDoorFront_10
+    21300022: elevatorDoorFront_11
+    21300024: elevatorDoorFront_12
+    21300026: elevatorDoorFront_13
+    21300028: elevatorDoorFront_14
+    21300030: elevatorDoorFront_15
+    21300032: elevatorDoorFront_16
+    21300034: elevatorDoorFront_17
+    21300036: elevatorDoorFront_18
+    21300038: elevatorDoorFront_19
+    21300040: elevatorDoorFront_20
+    21300042: elevatorDoorFront_21
+    21300044: elevatorDoorFront_22
+    21300046: elevatorDoorFront_23
+    21300048: elevatorDoorFront_24
+    21300050: elevatorDoorFront_25
+    21300052: elevatorDoorFront_26
+    21300054: elevatorDoorFront_27
+    21300056: elevatorDoorFront_28
+    21300058: elevatorDoorFront_29
+    21300060: elevatorDoorFront_30
+    21300062: elevatorDoorFront_31
+    21300064: elevatorDoorFront_32
+    21300066: elevatorDoorFront_33
+    21300068: elevatorDoorFront_34
+    21300070: elevatorDoorFront_35
+    21300072: elevatorDoorFront_36
+    21300074: elevatorDoorFront_37
+    21300076: elevatorDoorFront_38
+    21300078: elevatorDoorFront_39
+    21300080: elevatorDoorFront_40
+    21300082: elevatorDoorFront_41
+    21300084: elevatorDoorFront_42
+    21300086: elevatorDoorFront_43
+    21300088: elevatorDoorFront_44
+    21300090: elevatorDoorFront_45
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

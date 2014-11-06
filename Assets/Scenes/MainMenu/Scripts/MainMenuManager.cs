@@ -15,7 +15,7 @@ public class MainMenuManager : MonoBehaviour {
 	/// The button continue.
 	/// </summary>
 	[SerializeField]
-	TapGesture btnContinue;
+	TapGesture btnAbout;
 
 	/// <summary>
 	/// The button options.
@@ -51,6 +51,13 @@ public class MainMenuManager : MonoBehaviour {
 	/// </summary>
 	[SerializeField]
 	GameObject CreditsScreen;
+
+	/// <summary>
+	/// The about screen.
+	/// </summary>
+	[SerializeField]
+	GameObject AboutScreen;
+
 	#endregion
 
 	#region Behaviours
@@ -60,7 +67,7 @@ public class MainMenuManager : MonoBehaviour {
 	void OnEnable()
 	{
 		btnPlay.Tapped += btnPlay_Tapped;
-		btnContinue.Tapped += btnContinue_Tapped;
+		btnAbout.Tapped += btnAbout_Tapped;
 		btnOptions.Tapped += btnOptions_Tapped;
 		btnHelp.Tapped += btnHelp_Tapped;
 		btnCredits.Tapped += btnCredits_Tapped;
@@ -72,7 +79,7 @@ public class MainMenuManager : MonoBehaviour {
 	void OnDisable()
 	{
 		btnPlay.Tapped -= btnPlay_Tapped;
-		btnContinue.Tapped -= btnContinue_Tapped;
+		btnAbout.Tapped -= btnAbout_Tapped;
 		btnOptions.Tapped -= btnOptions_Tapped;
 		btnHelp.Tapped -= btnHelp_Tapped;
 		btnCredits.Tapped -= btnCredits_Tapped;
@@ -100,9 +107,9 @@ public class MainMenuManager : MonoBehaviour {
 		Application.LoadLevel("level1");
 	}
 	
-	void btnContinue_Tapped (object sender, System.EventArgs e)
+	void btnAbout_Tapped (object sender, System.EventArgs e)
 	{
-		Application.LoadLevel("level1");
+		AboutScreen.SetActive (true);
 	}
 	
 	void btnOptions_Tapped (object sender, System.EventArgs e)

@@ -1,6 +1,53 @@
 fileFormatVersion: 2
 guid: 7e93d44f76e57c44982bdf550441ad64
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: elevatorDoor_0
+    21300002: elevatorDoor_1
+    21300004: elevatorDoor_2
+    21300006: elevatorDoor_3
+    21300008: elevatorDoor_4
+    21300010: elevatorDoor_5
+    21300012: elevatorDoor_6
+    21300014: elevatorDoor_7
+    21300016: elevatorDoor_8
+    21300018: elevatorDoor_9
+    21300020: elevatorDoor_10
+    21300022: elevatorDoor_11
+    21300024: elevatorDoor_12
+    21300026: elevatorDoor_13
+    21300028: elevatorDoor_14
+    21300030: elevatorDoor_15
+    21300032: elevatorDoor_16
+    21300034: elevatorDoor_17
+    21300036: elevatorDoor_18
+    21300038: elevatorDoor_19
+    21300040: elevatorDoor_20
+    21300042: elevatorDoor_21
+    21300044: elevatorDoor_22
+    21300046: elevatorDoor_23
+    21300048: elevatorDoor_24
+    21300050: elevatorDoor_25
+    21300052: elevatorDoor_26
+    21300054: elevatorDoor_27
+    21300056: elevatorDoor_28
+    21300058: elevatorDoor_29
+    21300060: elevatorDoor_30
+    21300062: elevatorDoor_31
+    21300064: elevatorDoor_32
+    21300066: elevatorDoor_33
+    21300068: elevatorDoor_34
+    21300070: elevatorDoor_35
+    21300072: elevatorDoor_36
+    21300074: elevatorDoor_37
+    21300076: elevatorDoor_38
+    21300078: elevatorDoor_39
+    21300080: elevatorDoor_40
+    21300082: elevatorDoor_41
+    21300084: elevatorDoor_42
+    21300086: elevatorDoor_43
+    21300088: elevatorDoor_44
+    21300090: elevatorDoor_45
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,6 +1,45 @@
 fileFormatVersion: 2
 guid: 19b95f45c9db971488e27e715e796fb1
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Iddle0
+    21300002: Iddle1
+    21300004: Iddle2
+    21300006: Iddle3
+    21300008: Iddle4
+    21300010: jump0
+    21300012: jump1
+    21300014: jump2
+    21300016: jump3
+    21300018: jump4
+    21300020: jump5
+    21300022: jump6
+    21300024: jump7
+    21300026: jump8
+    21300028: jump9
+    21300030: jump10
+    21300032: walkTransition0
+    21300034: walkTransition1
+    21300036: walk00
+    21300038: walk01
+    21300040: walk02
+    21300042: walk03
+    21300044: walk04
+    21300046: walk05
+    21300048: walk06
+    21300050: walk07
+    21300052: walk08
+    21300054: walk09
+    21300056: walk10
+    21300058: walk11
+    21300060: walk12
+    21300062: walk13
+    21300064: Wall0
+    21300066: Wall1
+    21300068: Wall2
+    21300070: Wall3
+    21300072: WallJump0
+    21300074: WallJump1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,6 +1,17 @@
 fileFormatVersion: 2
 guid: 1ac04603c893caf429e02c97ef9e32c9
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: wallSlide_0
+    21300002: wallSlide_1
+    21300004: wallSlide_2
+    21300006: wallSlide_3
+    21300008: wallSlide_4
+    21300010: wallSlide_5
+    21300012: wallSlide_6
+    21300014: wallSlide_7
+    21300016: wallSlide_8
+    21300018: wallSlide_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

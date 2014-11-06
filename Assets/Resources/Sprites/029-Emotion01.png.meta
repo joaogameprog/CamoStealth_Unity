@@ -1,6 +1,15 @@
 fileFormatVersion: 2
 guid: 88b6ccf2882c0fd419e21b389f03538b
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: 029-Emotion01_0
+    21300002: 029-Emotion01_1
+    21300004: 029-Emotion01_2
+    21300006: 029-Emotion01_3
+    21300008: 029-Emotion01_4
+    21300010: 029-Emotion01_5
+    21300012: 029-Emotion01_6
+    21300014: 029-Emotion01_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
