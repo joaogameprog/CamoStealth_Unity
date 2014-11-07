@@ -36,6 +36,12 @@ public class MainMenuManager : MonoBehaviour {
 	TapGesture btnCredits;
 
 	/// <summary>
+	/// The exit button.
+	/// </summary>
+	[SerializeField]
+	TapGesture btnExit;
+
+	/// <summary>
 	/// The options screen.
 	/// </summary>
 	[SerializeField]
@@ -71,6 +77,7 @@ public class MainMenuManager : MonoBehaviour {
 		btnOptions.Tapped += btnOptions_Tapped;
 		btnHelp.Tapped += btnHelp_Tapped;
 		btnCredits.Tapped += btnCredits_Tapped;
+		btnExit.Tapped += btnExit_Tapped;
 	}
 
 	/// <summary>
@@ -83,6 +90,8 @@ public class MainMenuManager : MonoBehaviour {
 		btnOptions.Tapped -= btnOptions_Tapped;
 		btnHelp.Tapped -= btnHelp_Tapped;
 		btnCredits.Tapped -= btnCredits_Tapped;
+		btnExit.Tapped -= btnExit_Tapped;
+		
 	}
 
 
@@ -90,7 +99,7 @@ public class MainMenuManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Screen.SetResolution (800, 480, true);
 	}
 	
 	// Update is called once per frame
@@ -127,6 +136,11 @@ public class MainMenuManager : MonoBehaviour {
 		CreditsScreen.SetActive (true);
 	}
 
+
+	void btnExit_Tapped (object sender, System.EventArgs e)
+	{
+		Application.Quit ();
+	}
 	#endregion
 
 }

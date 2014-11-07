@@ -147,15 +147,18 @@ public class Aranha : Damager {
 		case SpiderSound.gunshot:
 			if(audio.clip != shootingAudio) audio.clip = shootingAudio;
 			audio.pitch = Random.Range(1.0f,2.0f);
+			audio.volume = ApplicationModel.SaveData.Volume;
 			audio.Play();
 			break;
 		case SpiderSound.hey:
 			if(audio.clip != emoticonAudio) audio.clip = emoticonAudio;
+			audio.volume = ApplicationModel.SaveData.Volume;
 			audio.pitch = Random.Range(2.0f,3.0f);
 			audio.Play();
 			break;
 		case SpiderSound.wut:
 			if(audio.clip != emoticonAudio) audio.clip = emoticonAudio;
+			audio.volume = ApplicationModel.SaveData.Volume;
 			audio.pitch = Random.Range(0.5f,1.5f);
 			audio.Play();
 			break;
@@ -282,7 +285,9 @@ public class Aranha : Damager {
 	public void die(){
 		if(dead) return;
 		dead = true;
+		collider2D.enabled = false;
 		soundToPlay = SpiderSound.death;
+		audio.volume = ApplicationModel.SaveData.Volume;
 		if(audio.clip != roarAudio) audio.clip = roarAudio;
 		audio.pitch = 1.0f;
 		audio.Play();

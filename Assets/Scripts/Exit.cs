@@ -11,6 +11,11 @@ public class Exit : MonoBehaviour {
 	private SpriteRenderer frontDoor_sr;
 
 	public bool enterElevator = false;
+	[SerializeField]
+	GameObject gameOverScreen;
+	bool shownGameOver;
+
+	float waitToGameOver = 3.5f;
 
 	void Awake(){
 		exit = gameObject;
@@ -28,25 +33,20 @@ public class Exit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(enterElevator == true){
+		if(!shownGameOver && enterElevator == true){
 			fakeLeon_sr.color += new Color(1,1,1,0.05f);
 			frontDoor_sr.color = new Color(1,1,1,1);
 			if(fakeLeon_sr.color.a >= 1){
 				GetComponent<Animator>().SetBool("Open",true);
 				frontDoor.GetComponent<Animator>().SetBool("Close",true);
+				waitToGameOver -= Time.deltaTime;
+				if(waitToGameOver < 0)
+				{
+					gameOverScreen.SetActive(true);
+					shownGameOver = true;
+				}
 			}
 		}
-	}
 
-	Rect windowRect = new Rect(Screen.width/10 * 4,Screen.height/20 *8,Screen.width/10 *2,Screen.height/20 *2);
-	void OnGUI() {
-		// Register the window. Notice the 3rd parameter 
-		if(fakeLeon_sr.color.a >= 1){
-			windowRect = GUI.Window (0, windowRect, windowFinnish, MainMenu.English?"End":"Fim");
-			if((Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.Backspace) || Input.GetKey(KeyCode.Space)|| Input.GetKey(KeyCode.KeypadEnter)))
-				Application.LoadLevel("MainMenuScreen");
-		}
 	}
-
-	void windowFinnish(int windowId){}
 }

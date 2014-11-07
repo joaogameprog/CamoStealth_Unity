@@ -18,6 +18,9 @@ public class OptionsScreenManager : MonoBehaviour {
 
 	[SerializeField]
 	TapGesture btnSave = null;
+
+	[SerializeField]
+	AudioSource music = null;
 	#endregion
 	#region Behaviours
 	void OnEnable () {
@@ -41,7 +44,7 @@ public class OptionsScreenManager : MonoBehaviour {
 	{
 		ApplicationModel.SaveData.Volume = volume;
 		ApplicationModel.SaveData.Language = TranslationsLanguages.ActiveLanguage;
-		SaveGame.Instance.Save ();
+		ApplicationModel.Save.Save ();
 	}
 
 	void Language_Tapped (object sender, System.EventArgs e)
@@ -68,6 +71,7 @@ public class OptionsScreenManager : MonoBehaviour {
 			volumeMeter [i].color = new Color (1f, 1f, 1f, 0.3f + 0.7f * Mathf.InverseLerp (fullAlpha * i, fullAlpha * (i + 1), newVolume));
 		}
 		volume = newVolume;
+		music.volume = volume;
 	}
 	#endregion
 

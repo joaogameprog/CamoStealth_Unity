@@ -12,4 +12,5 @@ public static class ApplicationModel {
 	public static int UnlockedLevels = 0;
 	public static bool initSaveGame = true;
 	public static SaveGame.SaveData SaveData = SaveGame.Instance.saveData; // {get{ return SaveGame.Instance.saveData;}}
+	public static SaveGame Save = SaveGame.Instance;
 }

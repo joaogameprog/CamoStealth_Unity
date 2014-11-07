@@ -48,6 +48,7 @@ public class SoundModule : PlayerCommand {
 		audio.Stop();
 		audio.clip = deathAudio;
 		audio.pitch = 1;
+		audio.volume = ApplicationModel.SaveData.Volume;
 		audio.Play();
 	}
 
@@ -57,6 +58,7 @@ public class SoundModule : PlayerCommand {
 	private void playDamageAudio(){
 		audio.clip = deathAudio;
 		audio.pitch = Random.Range(1.1f,1.3f);
+		audio.volume = ApplicationModel.SaveData.Volume;
 		audio.Play();
 	}
 
@@ -66,6 +68,7 @@ public class SoundModule : PlayerCommand {
 	private void playDashAudio(){
 		audio.clip = dashAudio;
 		audio.pitch = Random.Range(1.0f,1.2f);
+		audio.volume = ApplicationModel.SaveData.Volume;
 		audio.Play();
 	}
 

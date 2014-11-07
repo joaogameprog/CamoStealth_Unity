@@ -13,6 +13,7 @@ public class RestorationItem : MonoBehaviour {
 			Player.player.dmg.Health = Player.player.dmg.maxHealth;
 			if(audio.clip != restoreAudio) audio.clip = restoreAudio;
 			audio.pitch = 2.0f;
+			audio.volume = ApplicationModel.SaveData.Volume;
 			audio.Play();
 			this.GetComponent<SpriteRenderer>().color = Color.clear;
 			used = true;
